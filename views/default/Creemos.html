@@ -1,0 +1,209 @@
+{{extend 'layout_b.html'}}
+<style type="text/css">
+  .jumbotron_{
+    padding:30px;
+    margin-bottom:30px;
+    color:inherit;
+    background-color:#CECECE;
+    }
+  .jumbotron_ h1,.jumbotron_ .h1{
+    color:inherit
+    }
+  .jumbotron_ p{
+    margin-bottom:15px;
+    font-size:23px;
+    font-weight:200
+    }
+  .container .jumbotron_{
+    border-radius:0
+    }
+  .jumbotron_ .container{
+    max-width:100%
+    }
+    @media screen and (min-width:768px){
+      .jumbotron_{
+        padding-top:48px;
+        padding-bottom:48px
+        }
+      .container .jumbotron_{
+        padding-left:60px;
+        padding-right:60px
+        }
+      .jumbotron_ h1,.jumbotron_ .h1{
+        font-size:67.5px
+        }
+    }
+
+</style>
+<!-- ############################### navbar ################################  -->
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll">
+            <a id="up" href="#page-top" style="color:#494950">Ir Arriba</a>
+        </li>
+        <li style="cursor:pointer">
+            <a onclick="scrollcustom('#trini',40)"  style="color:#A4A3A8">Trinidad</a>
+        </li>
+        <li style="cursor:pointer">
+            <a id="idcontact" onclick="scrollcustom('#jesus',37)" style="color:#A4A3A8">Jesús</a>
+        </li>
+        <li style="cursor:pointer">
+            <a onclick="scrollcustom('#iglesia',20)" style="color:#A4A3A8">Iglesia</a>
+        </li>
+        <li class="page-scroll" >
+            <a href="#biblia" style="color:#A4A3A8">Biblia</a>
+        </li>
+        
+    </ul>
+</nav>
+
+<!-- ############################### navbar ends ################################  -->
+<div class="container-fluid" id="main">
+  <div class="row-fluid">
+<hr>
+<div class="jumbotron_">
+  <h1>Nuestro Creedo</h1><br>
+  <div class="panel panel-danger" id="trini">
+    <div class="panel-heading">
+      <h3 class="panel-title" align="center">DIOS EN TRES PERSONAS</h3>
+    </div>
+    <div style="background-color:#d7d7d7;" class="panel-body">
+      Creemos en Dios uno y Trino, es decir, en un solo Dios en tres personas divinas y eternas: Padre, Hijo y Espíritu Santo. Sólo a Dios adoramos, sólo a El damos toda la alabanza, la gloria y el honor, sólo a El rendimos culto, y sólo a El nos dirigimos en oración.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Padre</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos en Dios Padre, Creador de los cielos y la tierra. 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Hijo</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos en Jesucristo, su único Hijo, nuestro Señor, que fue concebido por obra del Espíritu Santo y nació de la virgen María. 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Espíritu Santo</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos en el Espíritu Santo, Dios santificador, que sella al creyente, lo une a la familia de la fe, mora en Èl, le da dones y lo guía.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" id="jesus">
+    <div class="col-md-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Jesús</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos que JESUS es verdadero Dios y verdadero hombre. <br><br>
+          Creemos en los milagros que Jesucristo hizo durante su ministerio terrenal y en su vida sin pecado.<br><br>
+          Creemos que fue crucificado, murió en la cruz por nuestros pecados, fue sepultado, resucitó al tercer día, ascendió a los cielos después de cuarenta días, y se sentó a la diestra del Padre celestial. <br><br>
+          Creemos que Jesús vendrá por segunda vez, en forma visible, a juzgar a los vivos y a los muertos. <br><br>
+          Creemos que la fe es la completa confianza en Jesucristo para el perdón de los pecados y la salvación.<br><br>
+          Creemos en el sacerdocio universal de todos los creyentes: cada creyente tiene acceso directo a Dios Padre por medio de Jesucristo nuestro Señor, y cada creyente es templo del Espíritu Santo. 
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Jesús</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos que Jesucristo cargó el castigo de todos nuestros pecados en la cruz del Calvario, en nuestro lugar, y que Su sacrificio fue perfecto y completo.
+          <br><br>
+          Creemos que para su salvación eterna, el hombre debe arrepentirse de sus pecados y confiar en Jesucristo como único Señor y Salvador.<br><br>
+          Creemos que Dios justifica al hombre sólo por los méritos de Jesucristo, sólo por su gracia. <br><br>
+          Creemos que somos declarados justos sólo por la fe en Cristo, sin ningún mérito de nuestra parte.<br><br>
+          Creemos que la sangre de Jesucristo nos limpia de todo pecado, y que si confesamos nuestros pecados a Dios, El nos perdona.<br><br>
+          Creemos que los creyentes en Jesucristo tendrán vida eterna en el cielo, y que los no creyentes irán a la condenación eterna en el infierno.<br><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" id="iglesia">
+
+    <div class="col-md-8">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">La Iglesia</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos en la Iglesia, cuya cabeza es Cristo, formada por todos los que sinceramente creen en Jesucristo como único y suficiente Señor y Salvador.
+          <br><br>
+          Creemos en la responsabilidad de los cristianos en llevar a cabo la gran comisión: ir por todo el mundo y predicar el evangelio a toda criatura, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo, y enseñándoles todas las cosas que Jesucristo nos mandó.
+          <br><br>
+          Creemos que las buenas obras del cristiano son el resultado de la verdadera fe, y que todos los cristianos deben ser activos en buenas obras. 
+          <br><br>
+          Creemos que como cristianos amamos a nuestro Señor con todo el corazón, y con toda el alma, y con toda la mente, y a nuestro prójimo como a nosotros mismos.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" align="center" style="padding-top:30px;">
+      <img src="{{=URL('static/images','chapel.jpg')}}" alt="..." class="img-responsive img-thumbnail">
+    </div>
+  </div>
+
+  <div class="row" id="biblia">
+    <div class="col-md-3 hidden-xs hidden-sm" align="center" style="">
+      <img src="{{=URL('static/images','bible.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="215px;">
+    </div>
+
+    <div class="col-md-5">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Biblia</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos en las Sagradas escrituras como palabra de Dios. 2ª. TIMOTEO 3:16<br><br>
+          Creemos en los 66 libros canónicos de la Biblia (39 del Antiguo Testamento y 27 del Nuevo Testamento), como la Palabra de Dios inspirada y preservada por el Espíritu Santo, única fuente de doctrina y autoridad. 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 ">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Es por Gracia</h3>
+        </div>
+        <div class="panel-body" style="background-color:#d7d7d7;">
+          Creemos que el ser humano fue creado a imagen y semejanza de Dios, con un alma inmortal, y que por causa de su pecado, vino a estar totalmente separado de Dios.<br><br>
+          Creemos que el hombre no puede, por sí mismo, restaurar su comunión con Dios.<br>
+        </div>
+      </div>
+    </div>
+  </div><br>
+</div>
+</div></div>
+
+
+
+
+
+
+<!-- ############################## MODALS  ###########-->

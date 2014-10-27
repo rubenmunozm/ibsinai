@@ -1,0 +1,111 @@
+<link href="{{=URL('static','css/timeline.css')}}" rel="stylesheet">
+
+<div class="divl secondary_banner">
+  <h1 style="padding-left:6%" align="left">How to have peace with God</h1>
+</div>
+
+<h1>How to have peace with God</h1>
+<ul id='timeline'>
+  <li class='work'>
+    <input class='radio' id='work5' name='works' type='radio' checked>
+    <div class="relative">
+      <label id="l1" for='work5'>Peace and eternal life for you</label>
+      <span class='date'>God´s Plan</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        The Bible says:<br>
+        "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." John 3:16<br><br>
+        God loves you and He wants you to experience his peace and eternal life.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work4' name='works' type='radio'>
+    <div class="relative">
+      <label id="l2" for='work4'>The separation from God and your sin</label>
+      <span class='date'>Humanity´s<br>Problem</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "for all have sinned and fall short of the glory of God" Romans 3:23<br><br>
+        To be in peace with God is not something automatic, by nature you are separated from God, and there is an abyss between you and God because of your sin.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio'>
+    <div class="relative">
+      <label id="l3" for='work3'>Jesus and the cross</label>
+      <span class='date'>God´s Design<br>To Be In<br>Peace With Him</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "He himself bore our sins in his body on the cross, so that we might die to sins and live for righteousness; by his wounds you have been healed." 1 Peter 2:24<br><br>
+        When Jesus died in the cross and rose again from the dead, he payed for your sins and formed a bridge over the abyss between you and God, that bridge is God´s great love for you.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio'>
+    <div class="relative">
+      <label id="l4" for='work2'>Recieve Jesus Christ as your Saviour and Lord</label>
+      <span class='date'>The answer<br>God expects<br>from Men</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "Here I am! I stand at the door and knock. If anyone hears my voice and opens the door, I will come in and eat with that person, and they with me." Revelations 3:20 <br>
+        "Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God" John 1:12<br><br>
+        Only you can decide to open your heart to Jesus and accept him as your Saviour, only then you will be able to cross that bridge and have peace with God.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio'>
+    <div class="relative">
+      <label id="trigger-overlay" onclick="changeZIndex(-1,'l1');changeZIndex(-1,'l2');changeZIndex(-1,'l3');changeZIndex(-1,'l4');changeZIndex(-1,'trigger-overlay')" for='work1'>¿How to recieve Jesus?</label>
+      <span class='date'>Make A<br>Decision</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      
+    </div>
+  </li>
+</ul>
+
+<script type="text/javascript">
+  function changeZIndex(i,id) {
+  document.getElementById(id).style.zIndex=i;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/style6.css')}}" />
+<script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+
+    <!-- open/close -->
+    <div class="overlay overlay-door">
+      <button onclick="changeZIndex(1,'l1');changeZIndex(1,'l2');changeZIndex(1,'l3');changeZIndex(1,'l4');changeZIndex(1,'trigger-overlay')" type="button" class="overlay-close">
+          <div class="lr">
+                    <div class="rl">
+                    </div></div>
+            </button>
+      <nav>
+        <ul>
+          <li><a class="g" href="#">Admit</a></li><br>
+          <li><a class="p" href="#">I am a sinner and have a spiritual need</a></li>
+          <li><a class="g" href="#">Repent</a></li><br>
+          <li><a class="p" href="#">Recognize your sin and don´t see it anymore as something natural</a></li>
+          <li><a class="g" href="#">Believe</a></li><br>
+          <li><a class="p" href="#">That Jesus died for you on the cross</a></li>
+          <li><a class="g" href="#">Recieve</a></li><br>
+          <li><a class="p" href="#">Through a prayer of faith and say to Jesus: Come into my heart</a></li><hr>
+          <li><a href="{{=URL('default','index_en',args=["form"])}}" style="color:#2DDC47" class="p" href="#">We would like to hear from you.<br>¡Contact us, we want to meet you!</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="{{=URL('static','js/classie.js')}}"></script>
+    <script src="{{=URL('static','js/demo1.js')}}"></script>
+

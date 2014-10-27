@@ -1,0 +1,27 @@
+{{if not verso_biblico1 or not verso_biblico2 or not verso_biblico3:}}  
+  <div class="alert alert-dismissable alert-success" align="justify">
+  – “<strong>Todo</strong> lo puedo en <strong>Cristo</strong> que me fortalece”<strong> Filipenses 4:13</strong>
+
+</div>
+<div class="alert alert-dismissable alert-info" align="justify">
+  – “Porque de tal manera<strong> amó Dios</strong> al mundo, que<strong> ha dado a su Hijo</strong> unigénito, para que todo aquel que <strong>en él cree</strong> no se pierda, mas tenga <strong>vida eterna</strong>”.<strong>Juan 3:16</strong>
+</div> 
+<div class="alert alert-dismissable alert-danger" align="justify">
+  – “Este es el día que hizo el Señor: alegrémonos y regocijémonos en él”
+  <strong>Salmos 118: 24</strong> 
+</div>
+{{else:}}
+
+<div style="background-color:#924CA4" class="alert alert-dismissable alert-success" align="justify">
+  – “{{=verso_biblico1.verso}}” 
+  <strong>{{=verso_biblico1.cita}}</strong> 
+</div>
+<div style="background-color:#79B7C9" class="alert alert-dismissable alert-info" align="justify">
+  – “{{=verso_biblico2.verso}}” 
+  <strong>{{=verso_biblico2.cita}}</strong> 
+</div>
+<div style="background-color:#83CD83" class="alert alert-dismissable alert-danger" align="justify">
+  – “{{=verso_biblico3.verso}}” 
+  <strong>{{=verso_biblico3.cita}}</strong> 
+</div>
+{{pass}}

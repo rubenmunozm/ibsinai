@@ -1,0 +1,59 @@
+{{extend 'layout_b.html'}}
+<link href="{{=URL('static','css/inputs.css')}}" rel="stylesheet">
+
+<div id="meet" class="row">
+<h1>Ministerio de Desarollo Web</h1>
+	<p>Por Su Gracia, Dios en nuestra iglesia ha derramado distintos dones, uno de ellos es el de desarrollo web, por lo cual y en obediencia a nuestro Dios queremos ponerlo al servicio de la comunidad cristiana, de las iglesias y de los ministerios cristianos cuyo propósito es el de llevar la palabra de Dios a las naciones.
+
+Con el fin de que el sostenimiento de este ministerio no sea una carga para nuestra iglesia y considerando que si Dios dio la visión también dará la provisión, creemos que para la mejor operación de este ministerio, se hagan el desarrollo web por medio de donaciones económicas que sin duda serán tanto de bendición para la comunidad cristiana como para la operación del ministerio.
+Será para nuestra iglesia así como para el líder del ministerio, un privilegio el poder servir para el engrandecimiento de la obra de Dios a través de su iglesia.
+
+Por favor contáctanos a través de esta página o por medio del correo electrónico pastor.ruben.munoz.g1@gmail.com .
+</p>
+</div>
+<div class="row" >
+<h1>Contáctanos</h1>
+<form action="#" enctype="multipart/form-data" method="post"> <!--Esta linea-->
+  <span>
+    <input type="text" required data-validation-required-message="Please enter a name." name="nombre" class="slide-up" id="name" placeholder="Escriba su Nombre" /><label for="name">Nombre</label>
+  </span>
+  <span>
+    <input type="email" required data-validation-required-message="Please enter your email address." name="correo" class="slide-up" id="email" placeholder="Correo para contactarlo" /><label for="phone">Correo</label>
+  </span>
+  <span>
+    <input type="tel" required data-validation-required-message="Please enter your phone number." name="telefono"class="slide-up" id="phone" placeholder="Teléfono para contactarlo" /><label for="phone">Teléfono</label>
+  </span><br>
+  <textarea class="txt" name="mensaje" rows="5" class="form-control" placeholder="Deje Su Mensaje" id="message" required data-validation-required-message="Please enter a message."></textarea>
+  
+  
+  
+</div>
+<div class="row">
+  <button type="submit" class="btn-block btn-info" style="background:#7AB893">Enviar Mensaje</button>
+  <input type="hidden" name="_formname" value="contact_form" />
+</div>
+</form>
+<style type="text/css">
+
+  
+
+	#footerbef{
+		background-color: #494950;
+	}
+	#footeraft{
+		background-color: #54545A;
+	}
+  
+  .txt{
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  }
+  h1,p,label {
+  color: #ebebeb;
+}
+</style>

@@ -1,0 +1,156 @@
+{{extend 'layout_en.html'}}
+
+<style type="text/css">
+  .divl{
+    position: absolute; top: 0px; left: 0;
+
+  }
+  .secondary_banner {
+   width: 100%; height: 350px; text-align: center;
+   background: rgba(246,246,246,1);
+background: -moz-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,246,246,1)), color-stop(80%, rgba(59,77,93,1)), color-stop(87%, rgba(43,62,80,1)));
+background: -webkit-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -o-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -ms-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: linear-gradient(to bottom, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#2b3e50', GradientType=0 );
+
+
+   overflow: hidden; 
+  }
+  hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0; }
+</style>
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll" style="padding-right:50%">
+            <a id="up" href="#page-top" style="color:#7B8491;">Top</a>
+        </li>
+        
+    </ul>
+</nav>
+
+<div class="divl secondary_banner">
+  <div style="top:10%;" class="navbar navbar-success navbar-default">
+          <div style="padding-left:8%;" class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><br>
+            
+            
+            <a class="navbar-brand" href="{{=URL('default','index_en',args=['nav'])}}">Antioquía Calvary Chapel</a>
+            <a class="hidden-xs hidden-sm hidden-md" style="padding-right:70%;"  href="{{=URL('default','index_en', args=['nav'])}}"><img src="{{=URL('static/images','dove_.png')}}" alt="..."></a>
+          </div>
+          <div align="left" style="padding-left:9%;" class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{=URL('default','index_en', args=['nav'])}}"><i class="fa fa-home fa-2x"></i></a></li>
+              <li><a href="{{=URL('default','AboutUs')}}" style="color:#5CB85C; font-size:17px;"><strong> About Us</strong></a></li>
+              <li><a href="{{=URL('default','Locations')}}" style="color:#5CB85C; font-size:17px;">Locations</a></li>
+              <li><a href="{{=URL('default','Beliefs')}}" style="color:#5CB85C; font-size:17px;">What we believe</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Ministries</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','CasaAbierta_en')}}" style="font-size:15px;">Casa Abierta Community Center</a></li>
+                  <li><a href="{{=URL('default','BibleStudies')}}"style="font-size:15px;">Bible Study Groups @ Home</a></li>
+                  <li><a href="{{=URL('default','web_en')}}"style="font-size:15px;" >Web Development</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Resources</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','photos')}}" style="font-size:15px;">Photos</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" style="font-size:15px;" data-toggle="modal" data-target="#ModalIglesias">Churches in Sonora</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#ModalBiblias" style="font-size:15px;">Bibles Online</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://www.calvarychapel.com" target="_blank" style="font-size:15px;">Calvary Chapel</a></li>
+                  <li><a href="http://www.ibccmexico.com/tablet/index.html" target="_blank" style="font-size:15px;">Calvary Chapel Mexico Bible Institute</a></li>
+                  
+                </ul>
+              </li>
+
+              <li><a href="{{=URL('default','PeaceWithGod')}}" target="_blank" style="color:#EA3636; font-size:17px;">Have Peace With God</a></li>
+              <li><a href="#" style="color:#5CB85C; font-size:17px;" data-toggle="modal" data-target="#ModalDonar">Donate</a></li>
+            </ul>
+            
+            <ul style="padding-right:9%;" class="nav navbar-nav navbar-right">
+              <li><a href="{{=URL('default','index', args=['nav'])}}"><img class="center-block" src="{{=URL('static/images','es_.png')}}" alt="..."></a></li>
+              <li><a href="{{=URL('default','index_en', args=['nav'])}}"><img class="center-block" src="{{=URL('static/images','en_.png')}}" alt="..."></a></li>
+            </ul>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="main">
+  <div class="row-fluid">
+
+    <div class="col-md-1 hidden-xs hidden-sm" style="background-color:rgba(153,54,51,0.90);">
+	    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    </div>
+    <div class="col-md-1 hidden-xs hidden-sm">
+	    <div class="col-md-6" style="background-color:#54647B;">
+	    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    </div>
+    </div>
+    
+    <div class="col-md-10" name="hola">
+    <h1>Bible Study Groups @ Home</h1><hr><br>
+	    <div class="row-fluid">
+    		<div class="well">
+			  "All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness." 2 Timothy 3:16
+			</div>
+    	</div>
+	    <div class="row">
+		    <div class="col-lg-6">
+		    	<p align="justify">
+          The Bible Study Groups are run by ladies and for ladies, which offer the possibility of studying the Bible seriously and systematically, allowing you to know Jesus more. 
+
+          There you can find women who already have found Jesus as their Lord and Savior, and who have opened their homes to welcome you with joy and are willing to take you to an encounter with Jesus.  
+
+				We believe that one of the greatest needs of mankind and especially the people of God, has to do with the knowledge of His Word.
+        The Bible Study Groups offer the possibility to study the Bible in a fraternal atmosphere, where you can express and find the correct answer to any concerns you have about your spiritual life.
+				</p>
+		    </div>
+		    <div class="col-lg-6">
+		    	<img class="img-thumbnail img-responsive" src="{{=URL('static/images','banner_estudios.jpg')}}" height="200px;">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-lg-6">
+		    	<p align="justify"><br>
+          We are sure that you joining one of the groups, is no accident but part of God's plan.    
+          Rest assured that you are welcome in one of the houses where we study the Bible, because it is a pleasure for us to receive you.
+				</p><br>
+		    </div>
+		    <div class="col-lg-6">
+		    	<br>
+		    	<div class="col-lg-6">
+		    	<address>
+                    <strong>Friday 9:00 AM</strong><br><br>
+                    <a href="{{=URL('default','DondeEstamos#casa')}}" style="color:white">
+                    Los nogales Nº. 34<br>
+                    Col. Las fuentes<br>
+                    Hermosillo, Sonora, México<br>
+                    </a>
+                  </address>
+		    	</div>
+		    	<div class="col-lg-6">
+		    	<address>
+                    <strong>Wednesday 5:00 PM</strong><br> <br>
+                    <a href="{{=URL('default','DondeEstamos#casa')}}" style="color:white">
+                    Villa del Norte Nº 72 <br>
+                    Col. Residencial Milán<br>
+                    Hermosillo, Sonora, México<br>
+                    </a>
+                  </address>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+
+  </div>
+</div>

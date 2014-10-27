@@ -1,0 +1,98 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+	<div class="col-md-4">
+	
+	
+	{{=form.custom.begin}}
+{{=form.custom.submit}}
+		<table class="table">
+		        <caption></caption>
+		        <thead></thead>
+		        
+		        <tbody>
+		        {{if botones.out_1_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_1_value}}</td>
+		          <td><h4>{{=botones.out_1_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_2_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_2_value}}</td>
+		          <td><h4>{{=botones.out_2_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_3_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_3_value}}</td>
+		          <td><h4>{{=botones.out_3_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_4_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_4_value}}</td>
+		          <td><h4>{{=botones.out_4_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_5_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_5_value}}</td>
+		          <td><h4>{{=botones.out_5_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_6_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_6_value}}</td>
+		          <td><h4>{{=botones.out_6_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_7_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_7_value}}</td>
+		          <td><h4>{{=botones.out_7_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+
+		        {{if botones.out_8_hide == False:}}
+		        <tr>
+		          <td>{{=form.custom.widget.out_8_value}}</td>
+		          <td><h4>{{=botones.out_8_label}}</h4></td>
+		        {{else:}}{{pass}}
+		        </tr>
+		        
+		        
+		        </tbody>
+		</table>
+	{{=form.custom.end}}
+	<div class="col-md-6">
+		<button id="mensaje1" class="btn btn btn-success" type="button" onclick = 'window.location="{{=URL('default', 'allon')}}";' title="Este botón guarda los cambios">Prender Todos</button>
+	</div>
+	<div class="col-md-6">
+		<button id="mensaje2" class="btn btn btn-danger" type="button" onclick = 'window.location="{{=URL('default', 'alloff')}}";' title="Este botón guarda los cambios">Apagar Todos</button>
+	</div>
+	
+	
+	</div>
+	
+	<div class="col-md-7 col-md-offset-1">
+		{{=grid_historial}}
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+//alert('Please wait while form is submitting');
+    $('.boolean').change(function(){
+        
+        $('input[type="submit"]').trigger('click');//selects the 100th one      
+    //Some code
+});
+</script>

@@ -1,0 +1,94 @@
+{{extend 'layout_b.html'}}
+
+
+
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll" >
+            <a id="up" href="#page-top" style="color:#7B8491;">Ir Arriba</a>
+        </li>
+        
+    </ul>
+</nav>
+
+
+
+<div class="container-fluid" id="main">
+  <div class="row-fluid">
+
+    <div class="col-md-1 hidden-xs hidden-sm hidden-md" style="background-color:rgba(153,54,51,0.90);">
+	    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    </div>
+    <div class="col-md-1 hidden-xs hidden-sm hidden-md">
+	    <div class="col-md-6" style="background-color:#54647B;">
+	    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	    </div>
+    </div>
+    
+    <div class="col-md-10" name="hola">
+    
+      <div class="row">
+          <div class="col-lg-6">
+            <h1>La Tiendita</h1>          
+          </div>
+          <div class="hidden-xs" style="padding-top:12px" class="col-lg-6" align="right">
+            <h3><a data-toggle="modal" data-target="#ModalImgs" style="cursor:pointer"><i class="fa fa-lg fa-picture-o"></i>&nbsp; Imágenes</a></h3>
+          </div>
+      </div>
+     
+      <hr><br>
+
+    	<div class="row-fluid">
+    		<div class="well" style="color:#ebebeb">
+			     "Más bien,  busquen primeramente el reino de Dios y su justicia,  y todas estas cosas les serán añadidas." <strong>Mateo 6:33</strong> 
+			  </div>
+    	</div>
+	    <div class="row">
+		    <div class="col-lg-6">
+		    	<p align="justify">“La tiendita” es un ministerio que Dios nos ha dado como visión, para animar en el estudio de la Palabra de Dios a los estudiantes jóvenes y adultos de la Escuela Bíblica del Centro Comunitario <a href="{{=URL('default','CasaAbierta')}}" target="_blank"> “CASA ABIERTA”</a> .<br><br>
+          La operación del ministerio la tiendita se basa en otorgar puntos a los alumnos por asistencia, por tarea cumplida y por participación  en clase, con lo cual creemos que es un factor de motivación para su constancia en la escuela, aunado a esto llevar a los estudiantes a la práctica de la palabra de Dios, empezando por experimentar el versículo de Mateo 6:33. 
+
+				</p>
+		    </div>
+		    <div class="col-lg-6" align="center">
+		    	<img class="img-thumbnail img-responsive" src="{{=URL('static/images','tienda.jpg')}}">
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-lg-6">
+		    	<p align="justify">De esta manera creemos que ellos por sí mismo entenderán que al buscar a Dios, serán transformados sus corazones, sus vidas y proveerá para una vida mejor
+          Aunque no es mucho lo que podemos satisfacer en cuanto a sus necesidades alimenticias, sabemos bien que ellos entenderán que esto es una bendición clara del amor de Dios por ellos.
+          </p>
+		    </div>
+
+		    <div class="col-lg-6">
+		    	<p align="justify">El sustento del ministerio “la tiendita” es que a través de ofrendas en especie de abarrotes y artículos de limpieza de casa y personales, se les cambie a los estudiantes por los puntos acumulados mensualmente.Te invito a ser parte de este ministerio aportando lo que Dios ponga en tu corazón, para que los nuevos creyentes en Cristo Jesús, experimenten el amor de Dios a través de los hermanos en la fe en Jesús.
+          </p>
+		    </div>
+		</div>
+    <div class="text-danger" align="center">
+           <strong>"rogándonos con insistencia que les concediéramos el privilegio de tomar parte en esta ayuda para los santos" 2 Corintios 8:4</strong> 
+    </div><br>
+	</div>
+
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="ModalImgs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ministerio La Tiendita</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='tiendita', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

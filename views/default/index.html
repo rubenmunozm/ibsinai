@@ -1,0 +1,586 @@
+{{extend 'layout_b.html'}}
+<style type="text/css">
+
+  .map-container {
+    position: relative;
+    padding-bottom: 36.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.map-container iframe,  
+.map-container object, 
+.map-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  .pad{
+    position: relative;
+    
+    width: 200%;
+
+  }
+  
+  .hi{
+    
+    max-width: auto;
+
+  }
+  .navi{
+    background-color: white;
+  }
+
+  .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #A4A3A8;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+    color: #494950;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 0px;
+    border-left: 1px solid red;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: red;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #A4A3A8;
+}
+.btn-outline {
+    margin-top: 15px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: #3b5998;
+    transition: all .5s ease-in-out;
+}
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #494950;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+.tooltip-inner {
+    max-width: 220px;
+    /* If max-width does not work, try using width instead */
+    width: 220px; 
+}
+.hola{
+      position: relative;
+      
+            background-color: white;
+            border-radius: 2px 2px 2px 2px;
+      -webkit-box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+-moz-box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+    }
+
+</style>
+
+<!-- ###############################top fixed navbar   ################################  -->
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll">
+            <a id="up" href="#page-top" style="color:#494950">Ir Arriba</a>
+        </li>
+        <li class="page-scroll">
+            <a id="idconoce" href="#meet" style="color:#A4A3A8">Conócenos</a>
+        </li>
+        <li class="page-scroll">
+            <a id="idcontact" href="#contact" style="color:#A4A3A8">Contáctanos</a>
+        </li>
+        <li class="page-scroll" >
+            <a id="idvisit"href="#visit" style="color:#A4A3A8">Visítanos</a>
+        </li>
+        
+    </ul>
+</nav>
+
+
+
+<div class="hidden-xs"><br></div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    
+
+    <div class="col-md-4" style="margin-top:-26px;"> <!-- Comienza div columna derecha /ahora izq-->
+        
+        <div class="visible-xs" style="padding-bottom:20px;">
+        </div>
+
+        
+        <div style="padding-bottom:5px;">
+          <a id="boton_refresh" href="#" data-toggle="tooltip" data-placement="right" title="Refrescar Versos Bíblicos"><i class="fa fa-spin fa-refresh"></i></a>
+        </div>
+
+        <!-- Llama al Load.html, donde estan los versos biblicos -->
+        <div id="div_load">
+          {{=LOAD( url=URL(c='default', f='load', user_signature=True), ajax=True)}}
+        </div>
+       
+        <div class="page-header">
+          <h2 id="container">Actividades</h2>
+        </div>
+
+        <ul class="list-group">
+          
+          <li class="list-group-item">
+            <span style="color: #5F5F66;background-color: #d7d7d7;" class="badge">Domingo 10:00 AM</span>
+            Escuela Bíblica Dominical
+          </li>
+          <li class="list-group-item">
+            <span style="color: #5F5F66;background-color: #d7d7d7;" class="badge">Domingo 11:30 AM</span>
+            Culto de Adoración
+          </li>
+          <li class="list-group-item">
+            <span style="color: #5F5F66;background-color: #d7d7d7;" class="badge">Miercoles 7:00 PM</span>
+            Culto de Oración
+          </li>
+          <li class="list-group-item">
+            <span style="color: #5F5F66;background-color: #d7d7d7;" class="badge">Jueves 7:00 PM</span>
+            Escuela Bíblica en Centro Comunitario <a href="{{=URL('default','DondeEstamos#casaabierta')}}" style="color:#924CA4;">Casa Abierta</a>:
+          </li>
+          <li class="list-group-item">
+            <span style="color: #5F5F66;background-color: #d7d7d7;" class="badge">Miercoles 5:00 PM<br>&<br>Viernes 9:00 AM</span>
+            Estudios bíblicos <a href="{{=URL('default','DondeEstamos#casa')}}" style="color:#924CA4;">en casa</a>:<br><br>
+          </li>
+        </ul>
+
+        <div class="col-md-11">
+            
+
+            <div class="page-header">
+                      <h2 ><i class="fa fa-line-chart"></i> &nbsp;Datos</h2>
+            </div>
+              
+              <h3>% Cristianos en Hermosillo:</h3>
+              <div class="progress progress-striped active" data-toggle="tooltip" title="7.1% Cristianos Evangélicos - INEGI 2010">
+                <div class="progress-bar progress-bar-info" style="width: 7.1%" ></div>
+              </div>
+              <h3>% Cristianos en México:</h3>
+              <div class="progress progress-striped active" data-toggle="tooltip" title="8.4% Cristianos Evangélicos - U.S Center for World Mission">
+                <div class="progress-bar progress-bar-success" style="width: 8.4%" ></div>
+              </div>
+              <h3>% Personas No Alcanzadas en México:</h3>
+              <div class="progress progress-striped active" data-toggle="tooltip" title="0.07% - No Alcanzados: No hay comunidad indígena de los cristianos creyentes con personas y recursos suficientes para evangelizar a su propio pueblo  - U.S Center for World Mission">
+                <div class="progress-bar" style="width: .5%"></div>
+              </div>
+              <h3>% Personas No Alcanzadas en India:</h3>
+              <div class="progress progress-striped active" data-toggle="tooltip" title="93% - No Alcanzados: No hay comunidad indígena de los cristianos creyentes con personas y recursos suficientes para evangelizar a su propio pueblo  - U.S Center for World Mission">
+                <div class="progress-bar progress-bar-warning" style="width: 93%"></div>
+              </div>
+              <h3>% Personas No Alcanzadas en China:</h3>
+              <div class="progress progress-striped active" data-toggle="tooltip" title="13% - No Alcanzados: No hay comunidad indígena de los cristianos creyentes con personas y recursos suficientes para evangelizar a su propio pueblo  - U.S Center for World Mission">
+                <div class="progress-bar progress-bar-danger" style="width: 13%"></div>
+              </div>
+
+              <a href="http://joshuaproject.net/" target="_blank" ><h5 align="left"> Mas Estadísticas...</h6></a>
+        </div>
+
+        
+    </div> <!-- Cierra div columna derecha /ahora izq -->
+
+    <div class="col-md-8"> <!--Abro div para columna izquierda / ahora der -->
+
+      <!-- ############################### carousel    ################################  -->
+      <div id="myCarousel" class="carousel slide carousel-fade hidden-xs" data-ride="carousel" data-interval="6000">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>   
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+              <div class="active item">
+                  <img class="center-block" src="{{=URL('static/images','wlsinai4.jpg')}}" alt="...">
+                  <div class="carousel-caption">
+                    <h1></h1>
+                    <h4>El que tiene al Hijo, tiene la vida; el que no tiene al Hijo de Dios, no tiene la vida.<br><br>1 Juan 5:12</h4>
+                  </div>
+              </div>
+              <div class="item">
+                  <img class="center-block" src="{{=URL('static/images','wlsinai5.jpg')}}" alt="...">
+                  <div class="carousel-caption">
+                    <h1></h1>
+                    <h4>Toda la Escritura es inspirada por Dios y útil para enseñar, para reprender, para corregir y para instruir en la justicia<br><br>2 Timoteo 3:16</h4>
+                  </div>
+              </div>
+              <div class="item">
+                  <img class="center-block" src="{{=URL('static/images','wl3.jpg')}}" alt="...">
+                  <div class="carousel-caption" style="background-color:rgba(159,112,62,.2)">
+                    <h1></h1>
+                    <h4>Porque tanto amó Dios al mundo, que dio a su Hijo unigénito, para que todo el que cree en él no se pierda, sino que tenga vida eterna.<br><br>Juan 3:16</h4>
+                  </div>
+              </div>
+          </div>
+          <!-- Carousel nav 
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>  -->
+      </div>
+
+      <div class="container-fluid">
+        <div align="center" class="row-fluid" id="meet">
+            <div class="col-md-12">
+            <div class="page-header">
+                          <h1 id="container">Conócenos</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 hola">
+        <br>
+          <ul style="background-color:#6F6E75" class="nav nav-tabs" style="margin-bottom: 15px;">
+            <li class="active"><a href="#creemos" data-toggle="tab">Creemos en:</a></li>
+            <li><a class="texto" href="#iglesia" data-toggle="tab">Nuestra Iglesia</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Nuestros Pastores
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#pastor" data-toggle="tab" style="font-size:19px;">Carlos Fong</a></li>
+                <li class="divider"></li>
+                <li><a href="#pastor2" data-toggle="tab" style="font-size:19px">Rubén Muñoz</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade " id="iglesia">
+              <h2 class="text-muted">Sinaí</h2>
+              <div class="row">
+                
+                <div class="col-lg-4">
+                  <p class="text-muted" align="justify">Somos un grupo de personas que deseamos aprender, amar y gozar en Cristo Jesús. Deseamos ser una iglesia cálida, donde tú y tu familia puedan recibir de Jesús nuestro Señor y Salvador su amor y su dirección.
+                  </p>
+                </div>
+                <div class="col-lg-8" style="padding-top:16px;" align="center">
+                  <img src="{{=URL('static/images','banner_sinai.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="200px;">
+                </div>
+                
+              </div>
+              <div class="row">
+                <div class="col-lg-5">
+                  <p class="text-muted" align="justify">
+                  Somos una iglesia que se reúne solo para dar la honra y la gloria a Dios Padre, Dios Hijo y Dios espíritu santo, mediante la enseñanza de la Biblia versículo por versículo. Somos una iglesia que nos gozamos en adorar a Dios por medio de la música y testimonios.
+                  </p>
+                </div>
+                <div class="col-lg-7" >
+                  <p class="text-muted" align="justify"> Testimonios de agradecimiento de las bendiciones de Dios en las familias de la iglesia.
+                  Somos una iglesia que promueve el compañerismo cristiano y la armonía entre los creyentes adorando a Dios por medio del amor de los unos a los otros y la intercesión por medio de la oración.
+                  Con gozo esperamos que nos puedan visitar y más aun que deseen ser parte de la Familia Sinaí.
+                  </p>
+                </div>
+
+              </div>
+              
+                 
+            </div>
+            <div class="tab-pane fade" id="pastor">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2 class="text-muted">Carlos Fong</h2>
+                  <p class="text-muted" align="justify">Dios le ha permitido al Pastor Carlos Fong servir en su obra como pastor de la iglesia desde el año de 1978. Después de haber servido activamente en distintos ministerios de liderazgo desde el año de 1965.<br>
+                  El Pastor Fong llegó a la Iglesia Sinaí en el año de 1959 por invitación de su esposa Dora Chaparro y recibió a Jesús como su Salvador y Señor en el año de 1960. 
+                  El Señor bendijo al pastor Fong con una hermosa familia, con Dora su esposa que goza de la presencia de Dios en el cielo y sus hijos Fernando 1º, Elizabeth,  Fernando 2º y Karina, todos ellos han entregado su corazón a Jesús y hoy día Fernando 2º desarrolla el ministerio pastoral en la ciudad de Nogales Sonora.
+
+                  </p>
+                </div>
+                  
+                <div class="col-md-4 hidden-xs hidden-sm" align="center" style="padding-top:50px;">
+                  <img src="{{=URL('static/images','pastorf1.jpg')}}" alt="..." class="img-thumbnail">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5 " style="padding-top:40px;" align="center">
+                  <img src="{{=URL('static/images','pastorf.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="200px;">
+                </div>
+                <div class="col-md-7">
+                <h4 class="text-muted">Palabras Del Pastor Fong:</h4><p class="text-muted" align="justify">
+                  "Con más de 50 años sirviendo al señor en su obra, actualmente y por la gracia de Dios, y solo por su misericordia el Señor me mantiene activamente como Pastor de la Iglesia Sinaí, con amor por la experiencia de servir a Dios, hago la más cordial invitación a venir a la iglesia, sabiendo que Jesús puede transformar su corazón, para que juntos le demos la honra y gloria a Dios."</p>
+                
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="tab-pane fade" id="pastor2">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2 class="text-muted">Rubén Muñoz García</h2>
+                  <p class="text-muted" align="justify">Con más de dos décadas en el ministerio, Dios le ha permitido Al pastor Rubén Muñoz servir en Su obra como pastor desde octubre de 1994 a través de la plantación de tres iglesias, y como movilizador de misioneros durante 10 años siendo director de la oficina regional de Sonora de una agencia misionera internacional. 
+                  Actualmente es pastor de la iglesia Bautista Sinaí, iglesia en la que Dios le dio la oportunidad y el privilegio de servir desde junio del año 2006.
+                  </p>
+                </div>
+                  
+                <div class="col-md-4 hidden-xs hidden-sm" align="center">
+                  <img src="{{=URL('static/images','pastor1.jpg')}}" alt="..." class="img-thumbnail">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5" style="padding-top:40px;" align="center">
+                  <img src="{{=URL('static/images','fam_munoz.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="200px;">
+                </div>
+                <div class="col-md-7">
+                <h4 class="text-muted">Palabras Del Pastor Muñoz:</h4><p class="text-muted" align="justify">
+                  "Por la Gracia de Dios, recibí a Jesús como mi Salvador y Señor desde el año de 1977 por medio de mi novia, y actualmente esposa Doris y Dios me ha bendecido grandemente al darme una hermosa familia con mi esposa Doris, mis hijos Dámaris, Maresa y Rubén Jr. Con gran gozo y placer nos gustaría a mi esposa y a mí, recibirlos como visitantes y más aún, si Dios así lo permite y ustedes lo deciden, que sean parte de la familia Sinaí."</p>
+                
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <blockquote>
+                      <p class="text-muted">"Y este evangelio del reino se predicará en todo el mundo como testimonio a todas las naciones, y entonces vendrá el fin"</p>
+                      <small class="text-muted">Mateo 24:14</small>
+                    </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade active in" id="creemos">
+              <div class="row">
+                <div class="col-lg-12">
+                <img src="{{=URL('static/images','banner_bible2.jpg')}}" alt="..." class="img-responsive">
+                </div>
+              </div>
+              <p class="text-muted" align="justify">
+              Creemos en <a class="text-danger">Dios uno y Trino</a>, es decir, en un solo Dios en tres personas divinas y eternas: Padre, Hijo y Espíritu Santo. Sólo a Dios adoramos, sólo a El damos toda la alabanza, la gloria y el honor, sólo a El rendimos culto, y sólo a El nos dirigimos en oración.<br><br>
+
+              Creemos en <a class="text-danger">Dios Padre</a>, Creador de los cielos y la tierra.<br><br>
+
+              Creemos en <a class="text-danger">Jesucristo</a>, su único Hijo, nuestro Señor, que fue concebido por obra del Espíritu Santo y nació de la virgen María. Creemos que JESUS es verdadero Dios y verdadero hombre. Creemos en los milagros que Jesucristo hizo durante su ministerio terrenal y en su vida sin pecado. <br><br>
+
+              Creemos que fue <a class="text-danger">crucificado</a>, murió en la cruz por nuestros pecados, fue sepultado,<a class="text-danger"> resucitó</a> al tercer día, ascendió a los cielos después de cuarenta días, y se sentó a la diestra del Padre celestial. <br><br>
+
+              Creemos que Jesús <a class="text-danger">vendrá por segunda vez</a>, en forma visible, a juzgar a los vivos y a los muertos.<br><br>
+
+              Creemos en el <a class="text-danger">Espíritu Santo</a>, Dios santificador, que sella al creyente, lo une a la familia de la fe, mora en Èl, le da dones y lo guía.<br><br>
+
+              Creemos en las Sagradas escrituras como palabra de Dios. 2ª. TIMOTEO 3:16Creemos en los 66 libros canónicos de la <a class="text-danger">Biblia</a> (39 del Antiguo Testamento y 27 del Nuevo Testamento), como la Palabra de Dios inspirada y preservada por el Espíritu Santo, única fuente de doctrina y autoridad.<br><br>
+
+              <a href="{{=URL('default','Creemos#main')}}"><b>Más...</b></a>
+              </p>
+            </div>
+          </div> 
+      </div>
+
+      <br><br>
+      <div class="container-fluid" >
+        <div align="center" class="row-fluid" id="contact">
+            <div class="col-md-12">
+            <div class="page-header">
+                  <h1 id="container"><i class="fa fa-envelope-o fa-lg"></i>&nbsp; Contáctanos</h1>
+                  <h4>¿Cómo podemos orar por ti?</h4>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="col-md-12">
+        <div class="row-fluid" >
+                <div class="col-lg-10 col-lg-offset-1">
+                    <!--para qu funcione el form se necesita lo que comentare --><br>
+                    <form action="#" enctype="multipart/form-data" method="post"> <!--Esta linea-->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Nombre</label>
+                                <input name="nombre" type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Please enter your name."> 
+                                <!-- poner en name, el nombre del campo tal como esta en la db -->
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Correo electrónico</label>
+                                <input name="correo" type="email" class="form-control" placeholder="Correo electrónico" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Teléfono</label>
+                                <input name="telefono" type="tel" class="form-control" placeholder="Teléfono" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Mensaje</label>
+                                <textarea name="mensaje" rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row" align="right">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+                                <!-- tipo submit -->
+                                <input type="hidden" name="_formname" value="contact_form" />
+                                <!-- y esta otra ultima linea-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+      </div>
+      
+
+      
+      
+    </div> <!--Cierra div columna izquierda -->
+
+
+    <div class="col-md-12" id="visit">
+        <div class="page-header" align="center">
+                  <h1 id="container"><i class="fa fa-map-marker fa-lg"></i>&nbsp; Visítanos</h1>
+        </div>  
+        <div class="col-md-3">
+              <address>
+                <strong>Iglesia Bautista Sinaí</strong><br>
+                Calle Mariano Escobedo #63<br>
+                Entre Veracruz y Nayarit<br>
+                Col. San Benito C.P 83190<br>
+                Hermosillo, Sonora, México<br>
+                Tel. 6622753880<br>
+              </address>
+
+              <address>
+                <strong>Pastores:</strong><br>
+                <strong>Carlos Fong</strong><br>
+                <strong>Rubén Muñoz</strong><br>
+                <a href="mailto:#" style="color:#924CA4">pastor.ruben.munoz.g1@gmail.com</a>
+              </address>
+        </div>
+        <div class="col-md-9">
+                <div class="map-container">
+                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=General+Mariano+Escobedo+63,+San+Benito,+83190+Hermosillo,+SON,México"></iframe>
+                </div><br>
+        </div>
+        
+    </div>
+
+
+  </div>
+</div>
+
+
+<br><br>
+
+{{if not request.args(0):}}<!--Si se entra sin args..osea no va redireccionado dentro de la pagina, sino accede por primera vez, muestra el script-->
+<script type="text/javascript">
+      window.onload = function() {
+          document.getElementById( 'trigger-overlay' ).click()
+        };
+</script>
+{{else:}}
+  {{if request.args(0) == 'form':}}
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById( 'idcontact' ).click()
+        };
+  </script>
+  {{else:}}
+  {{pass}}
+{{pass}}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#boton_refresh').click(function() {
+
+      web2py_component('{{=URL(c='default', f='load', user_signature=True)}}', target='div_load')
+
+      return false;
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  function changeZIndex(i,id) {
+  document.getElementById(id).style.zIndex=i;
+}
+function changeColor(element,color) {
+  document.getElementById(element).style.color=color;
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/style3.css')}}" />
+<script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+  
+<button onclick="changeZIndex(-1,'myCarousel');changeColor('up','#3C3A89');changeColor('idconoce','#3C3A89');changeColor('idcontact','#3C3A89');changeColor('idvisit','#3C3A89')" class="hidden" id="trigger-overlay" type="button">Open Overlay</button>
+ 
+
+<!-- open/close -->
+    <div class="overlay overlay-slidedown hidden-xs">
+      <button onclick="changeZIndex(1,'myCarousel');changeColor('up','#494950');changeColor('idconoce','#A4A3A8');changeColor('idcontact','#A4A3A8');changeColor('idvisit','#A4A3A8')" type="button" class="overlay-close">Close</button>
+      <nav>
+        <ul>
+          <ul>
+          <li><a href="#"><img src="{{=URL('static/images','dove__.png')}}" alt="..."></a></li>
+          <li><a class="jesus" href="{{=URL('default','PazConDios')}}" target="_blank">Conoce a Jesús Hoy &nbsp;<i class="fa fa-arrow-right"></i></a></li>
+        </ul>
+        </ul>
+      </nav>
+    </div>
+    <script src="{{=URL('static','js/classie.js')}}"></script>
+    <script src="{{=URL('static','js/demo1.js')}}"></script>

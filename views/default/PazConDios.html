@@ -1,0 +1,112 @@
+<link href="{{=URL('static','css/timeline.css')}}" rel="stylesheet">
+
+<div class="divl secondary_banner">
+  <h1 style="padding-left:6%" align="left">Como Obtener Paz Con Dios</h1>
+</div>
+
+<h1>Como Obtener Paz Con Dios</h1>
+<ul id='timeline'>
+  <li class='work'>
+    <input class='radio' id='work5' name='works' type='radio' checked>
+    <div class="relative">
+      <label id="l1" for='work5'>Paz y vida eterna para tí</label>
+      <span class='date'>El Plan De Dios</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        La Biblia dice:<br>
+        "Porque tanto amó Dios al mundo,  que dio a su Hijo unigénito,  para que todo el que cree en él no se pierda,  sino que tenga vida eterna" Juan 3:16<br><br>
+        Dios te ama y quiere que tu experimentes su paz y la vida eterna.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work4' name='works' type='radio'>
+    <div class="relative">
+      <label id="l2" for='work4'>La separación con Dios y su pecado</label>
+      <span class='date'>El Problema De<br>La Humanidad</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "Pues todos han pecado y están privados de la gloria de Dios" Romanos 3:23<br><br>
+        El estar en paz con Dios no es algo automático, por naturaleza estás separado de Dios y hay un abismo entre tu y Dios por el pecado.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work3' name='works' type='radio'>
+    <div class="relative">
+      <label id="l3" for='work3'>La cruz de Jesucristo</label>
+      <span class='date'>El Diseño De<br>Dios Para Tener<br>Paz Con Él</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "Él mismo,  en su cuerpo,  llevó al madero nuestros pecados,  para que muramos al pecado y vivamos para la justicia.  Por sus heridas ustedes han sido sanados." 1 Pedro 2:24<br><br>
+        Cuando Jesús murió en la cruz y se levantó de los muertos, pagó por tus pecados y formó un puente sobre el abismo entre tu y Dios, ese puente es el gran amor de Dios por ti.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work2' name='works' type='radio'>
+    <div class="relative">
+      <label id="l4" for='work2'>Aceptar a Jesucristo como su Salvador y Señor</label>
+      <span class='date'>La Respuesta<br>Que Dios Espera<br>Del Hombre</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      <p>
+        "Mira que estoy a la puerta y llamo.  Si alguno oye mi voz y abre la puerta,  entraré,  y cenaré con él,  y él conmigo." Apocalipsis 3:20 <br>
+        "Mas a cuantos lo recibieron,  a los que creen en su nombre,  les dio el derecho de ser hijos de Dios." Juan 1:12<br><br>
+        Solo tu puedes decidir abrir tu corazón a Jesús y aceptarle como tu salvador y así podrás cruzar el puente y tener paz con Dios.
+      </p>
+    </div>
+  </li>
+  <li class='work'>
+    <input class='radio' id='work1' name='works' type='radio'>
+    <div class="relative">
+      <label id="trigger-overlay" onclick="changeZIndex(-1,'l1');changeZIndex(-1,'l2');changeZIndex(-1,'l3');changeZIndex(-1,'l4');changeZIndex(-1,'trigger-overlay')" for='work1'>¿Cómo recibir a Jesús?</label>
+      <span class='date'>Tomar La<br>Decisión</span>
+      <span class='circle'></span>
+    </div>
+    <div class='content'>
+      
+    </div>
+  </li>
+</ul>
+
+<script type="text/javascript">
+  function changeZIndex(i,id) {
+  document.getElementById(id).style.zIndex=i;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/style6.css')}}" />
+<script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+
+    <!-- open/close -->
+    <div class="overlay overlay-door">
+      <button onclick="changeZIndex(1,'l1');changeZIndex(1,'l2');changeZIndex(1,'l3');changeZIndex(1,'l4');changeZIndex(1,'trigger-overlay')" type="button" class="overlay-close">
+          <div class="lr">
+                    <div class="rl">
+                    </div></div>
+            </button>
+      <nav>
+        <ul>
+          <li><a class="g" href="#">Admitir</a></li><br>
+          <li><a class="p" href="#">Soy pecador y tengo necesidad espiritual</a></li>
+          <li><a class="g" href="#">Arrepentirse</a></li><br>
+          <li><a class="p" href="#">Reconocer tu pecado y ya no verlo como algo natural</a></li>
+          <li><a class="g" href="#">Creer</a></li><br>
+          <li><a class="p" href="#">Que Jesús murió por ti en la cruz</a></li>
+          <li><a class="g" href="#">Recibir</a></li><br>
+          <li><a class="p" href="#">Por medio de una oración de fe y decirle a Jesús: Ven y entra en mi corazón</a></li><hr>
+          <li><a href="{{=URL('default','index',args=["form"])}}" style="color:#2DDC47" class="p" href="#">Nos gustaría saber de tí.<br>¡Contáctanos, deseamos conocerte!</a></li>
+        </ul>
+
+      </nav>
+    </div>
+    <script src="{{=URL('static','js/classie.js')}}"></script>
+    <script src="{{=URL('static','js/demo1.js')}}"></script>
+

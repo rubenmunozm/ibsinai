@@ -1,0 +1,205 @@
+{{extend 'layout_en.html'}}
+<style type="text/css">
+  .jumbotron_{
+    padding:30px;
+    margin-bottom:30px;
+    color:inherit;
+    background-color:#54647B
+    }
+  .jumbotron_ h1,.jumbotron_ .h1{
+    color:inherit
+    }
+  .jumbotron_ p{
+    margin-bottom:15px;
+    font-size:23px;
+    font-weight:200
+    }
+  .container .jumbotron_{
+    border-radius:0
+    }
+  .jumbotron_ .container{
+    max-width:100%
+    }
+    @media screen and (min-width:768px){
+      .jumbotron_{
+        padding-top:48px;
+        padding-bottom:48px
+        }
+      .container .jumbotron_{
+        padding-left:60px;
+        padding-right:60px
+        }
+      .jumbotron_ h1,.jumbotron_ .h1{
+        font-size:67.5px
+        }
+    }
+</style>
+<!-- ############################### navbar ################################  -->
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll">
+            <a id="up" href="#page-top" style="color:white">Top</a>
+        </li>
+        <li style="cursor:pointer">
+            <a onclick="scrollcustom('#trini',40)"  style="color:#7B8491">Trinity</a>
+        </li>
+        <li style="cursor:pointer">
+            <a id="idcontact" onclick="scrollcustom('#jesus',37)" style="color:#7B8491">Jesus</a>
+        </li>
+        <li style="cursor:pointer">
+            <a onclick="scrollcustom('#iglesia',20)" style="color:#7B8491">Church</a>
+        </li>
+        <li style="cursor:pointer" >
+            <a onclick="scrollcustom('#biblia',37)" style="color:#7B8491">Bible</a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- ############################### navbar ends ################################  -->
+<div class="container-fluid" id="main">
+  <div class="row-fluid">
+<hr>
+<div class="jumbotron_">
+  <h1>We Believe</h1><br>
+  <div class="panel panel-danger" id="trini">
+    <div class="panel-heading">
+      <h3 class="panel-title" align="center">Trinity</h3>
+    </div>
+    <div class="panel-body">
+      We believe that there is one living and true GOD, eternally existing in three persons: The Father, the Son, and the Holy Spirit, equal in power and glory. We believe that the Trinity created all, upholds all, and governs all things.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">God the Father</h3>
+        </div>
+        <div class="panel-body">
+          We believe in the person of God the Father; an infinite, eternal, personal Spirit; perfect in holiness, wisdom, power, and love. We believe He concerns Himself mercifully in the affairs of men, hears and answers prayer, and saves from sin and death all those who come to Him through faith in Jesus Christ.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Jesus Christ the Son</h3>
+        </div>
+        <div class="panel-body">
+          We believe in the person of Jesus Christ, God’s only begotten Son, who was conceived by the Holy Spirit. We believe in His virgin birth, sinless life, miracles, teachings, substitutionary atoning death, bodily resurrection, ascension into heaven, perpetual intercession for His people, and personal, visible return to earth.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">God the Holy Spirit</h3>
+        </div>
+        <div class="panel-body">
+          We believe in the person of the Holy Spirit—that He proceeds forth from the Father and Son to convict the world of sin, righteousness, and judgment; that He does regenerate, sanctify, and empower for ministry all who believe the biblical gospel.<br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" id="jesus">
+    <div class="col-md-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Jesus</h3>
+        </div>
+        <div class="panel-body">
+          We believe that JESUS is fully God and fully man. <br><br>
+          We believe in the miracles he made on earth, where he knew no sin.<br><br>
+          We believe that he was crucified, died on the cross for our sins, he was buried, rose again on the third day and after forty days ascended to heaven, where he now seats at the right hand of God.<br><br>
+          We believe the Second Coming of Jesus Christ will be a personal, visible return to earth. The Second Coming will coincide with the establishment of His millennial kingdom, the resurrection, final judgment, eternal blessing of the righteous, and eternal condemnation of the wicked.<br><br>
+          
+          We believe that every believer has direct access to God the Father through Jesus Christ our Lord, and every believers body is temple of the Holy Spirit. 
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Jesus</h3>
+        </div>
+        <div class="panel-body">
+          We believe that though all humans are guilty, Jesus Christ died on the cross in our place for our sins absorbing God’s wrath on our behalf. In so doing God is able to forgive the spiritual crimes of people without violating the demands of justice.<br><br>
+          We believe that for eternal salvation, men needs to repent from its sins and believe in Jesus Christ as its Lord and Saviour.<br><br>
+          We believe that men is only justified before God because of what Jesus did, by grace.<br><br>
+          We believe that the blood of Jesus has cleansed us from every sin, and as we confess our sins to God, He forgives us.<br><br>
+          We believe that whoever believes in Jesus Christ will have eternal life in heaven, and those who does not, will be eternally condemned in hell.<br><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" id="iglesia">
+
+    <div class="col-md-8">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">The Church</h3>
+        </div>
+        <div class="panel-body">
+          We believe in the universal church—the living and organic spiritual body of people—of which Christ is the Head and all who are born-again through faith in the biblical gospel are a part.
+          <br><br>
+          The church was created to proclaim the good news of Jesus Christ, and to to live on mission and bless the world, meeting it at its places of pain for the glory of God and the betterment of humanity. 
+          <br><br>
+          We believe that the as each of us allows the Spirit to work in us and through us, and as we operate in the gifts He offers us, the Church will become all that God intends her to be.
+          <br><br>
+          We believe that as christians we love our Lord with all our heart, mind and soul; so as we love our neighbor as ourself.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" align="center" style="padding-top:30px;">
+      <img src="{{=URL('static/images','chapel.jpg')}}" alt="..." class="img-responsive img-thumbnail">
+    </div>
+  </div>
+
+  <div class="row" id="biblia">
+    <div class="col-md-3 hidden-xs hidden-sm" align="center" style="">
+      <img src="{{=URL('static/images','bible.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="215px;">
+    </div>
+
+    <div class="col-md-5">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Bible</h3>
+        </div>
+        <div class="panel-body">
+          We believe that the Scriptures, are the fully inspired Word of God without error in the original manuscripts, and the infallible rule of faith and practice. The Word of God is the foundation upon which the church operates, and the basis by which the church is governed. We believe that the 66 books of the Bible (39 of the Old Testament and 27 of the New Testament) supersede any and all earthly law in precept and principle.
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 ">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Only by Grace</h3>
+        </div>
+        <div class="panel-body">
+          We believe that mankind was created in the image of God, with an immortal soul, and as a result of its sin, mankind was totally separated from God.<br><br>
+          We believe that man in its own effort can not restore that relationship with God, but only through faith in Jesus Christ by grace.<br>
+        </div>
+      </div>
+    </div>
+  </div><br>
+</div>
+</div></div>
+
+
+
+
+
+
+<!-- ############################## MODALS  ###########-->

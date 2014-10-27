@@ -1,0 +1,251 @@
+{{extend 'layout_en.html'}}
+<style type="text/css">
+  .divl{
+    position: absolute; top: 0px; left: 0;
+
+  }
+  .secondary_banner {
+   width: 100%; height: 350px; text-align: center;
+   background: rgba(246,246,246,1);
+background: -moz-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,246,246,1)), color-stop(80%, rgba(59,77,93,1)), color-stop(87%, rgba(43,62,80,1)));
+background: -webkit-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -o-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -ms-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: linear-gradient(to bottom, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#2b3e50', GradientType=0 );
+
+
+   overflow: hidden; 
+  }
+
+</style>
+
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll" style="padding-right:50%">
+            <a id="up" href="#page-top" style="color:#7B8491;">Top</a>
+        </li>
+        
+    </ul>
+</nav>
+
+<div class="divl secondary_banner">
+  <div style="top:10%;" class="navbar navbar-success navbar-default">
+          <div style="padding-left:8%;" class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><br>
+            
+            
+            <a class="navbar-brand" href="{{=URL('default','index_en',args=['nav'])}}">Antioquía Calvary Chapel</a>
+            <a class="hidden-xs hidden-sm hidden-md" style="padding-right:70%;"  href="{{=URL('default','index_en', args=['nav'])}}"><img src="{{=URL('static/images','dove_.png')}}" alt="..."></a>
+          </div>
+          <div align="left" style="padding-left:9%;" class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{=URL('default','index_en', args=['nav'])}}"><i class="fa fa-home fa-2x"></i></a></li>
+              <li><a href="{{=URL('default','AboutUs')}}" style="color:#5CB85C; font-size:17px;"><strong> About Us</strong></a></li>
+              <li><a href="{{=URL('default','Locations')}}" style="color:#5CB85C; font-size:17px;">Locations</a></li>
+              <li><a href="{{=URL('default','Beliefs')}}" style="color:#5CB85C; font-size:17px;">What we believe</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Ministries</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','CasaAbierta_en')}}" style="font-size:15px;">Casa Abierta Community Center</a></li>
+                  <li><a href="{{=URL('default','BibleStudies')}}"style="font-size:15px;">Bible Study Groups @ Home</a></li>
+                  <li><a href="{{=URL('default','web_en')}}"style="font-size:15px;" >Web Development</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Resources</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','photos')}}" style="font-size:15px;">Photos</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" style="font-size:15px;" data-toggle="modal" data-target="#ModalIglesias">Churches in Sonora</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#ModalBiblias" style="font-size:15px;">Bibles Online</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://www.calvarychapel.com" target="_blank" style="font-size:15px;">Calvary Chapel</a></li>
+                  <li><a href="http://www.ibccmexico.com/tablet/index.html" target="_blank" style="font-size:15px;">Calvary Chapel Mexico Bible Institute</a></li>
+                  
+                </ul>
+              </li>
+
+              <li><a href="{{=URL('default','PeaceWithGod')}}" target="_blank" style="color:#EA3636; font-size:17px;">Have Peace With God</a></li>
+              <li><a href="#" style="color:#5CB85C; font-size:17px;" data-toggle="modal" data-target="#ModalDonar">Donate</a></li>
+            </ul>
+            
+            <ul style="padding-right:9%;" class="nav navbar-nav navbar-right">
+              <li><a href="{{=URL('default','index', args=['nav'])}}"><img class="center-block"  src="{{=URL('static/images','es_.png')}}" alt="..."></a></li>
+              <li><a href="{{=URL('default','index_en', args=['nav'])}}"><img class="center-block"  src="{{=URL('static/images','en_.png')}}" alt="..."></a></li>
+            </ul>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="main">
+  <div class="row-fluid">
+    <div class="col-md-1 hidden-xs hidden-sm" style="background-color:rgba(153,54,51,0.90);">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="col-md-1 hidden-xs hidden-sm">
+    <div class="col-md-6" style="background-color:#54647B;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    </div>
+    
+    <div class="col-md-10" name="hola">
+      <div class="row">
+      <div class="col-md-8">
+      <h1>Casa Abierta Community Center</h1></div>
+      <div class="col-md-4 hidden-xs hidden-sm" align="right">
+      <img style="padding-left:0px;" src="{{=URL('static/images','casa_.png')}}" alt="..." class="img-rounded img-responsive"></div>
+      </div>
+      <hr><br>
+        <ul class="nav nav-tabs" id="actionsnav">
+        <li class="active"><a href="#ejecutivas" data-toggle="tab">Executive Actions</a></li>
+        <li class=""><a href="#ayudah" data-toggle="tab" >Humanitarian Work Actions</a></li>
+        <li class=""><a href="#motivos" data-toggle="tab">Prayer Requests</a></li>
+        <li class="" data-toggle="modal" data-target="#ModalImgs"><a><i class="fa fa-lg fa-picture-o"></i>&nbsp; Images</a> </li>
+        <li class="" data-toggle="modal" data-target="#ModalRpt"><a><i class="fa fa-lg fa-file-text"></i>&nbsp; Reports</a> </li>
+        
+      </ul>
+      <hr>
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="ejecutivas">
+          <div class="alert alert-dismissable alert-success">
+            <h4>“ Therefore go and make disciples of all nations; teaching them to obey everything I have commanded you.”&nbsp;&nbsp;MATTHEW 28:19-20</h4>
+          </div>
+          
+           <h4 style="text-align:center">Bringing the word of Hope to the community</h4> <br>
+            <blockquote>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Bible School: classes for kids, teenagers, youth and adults.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Family biblical counseling: to promote family harmony. <br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Marriage counseling: to prevent the breakdown of marriage and promote a christian home.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Teachings on roles and responsibilities of the family members, as a family and as a member.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Evangelism strategies: design strategies and practices, taking actions that allow the encounter with Jesus and thus encourage and increase faith in Jesus.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Recreational biblical activities for kids: make children's events in order to create a kids club which promotes their relationship with Jesus and help them recognize the love of God in their lives.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Biblical fellowship for married couples: hold events for adults enabling them to ascertain the power of God in their lives, allowing them to invite Jesus into their hearts.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Recreation through Christian films, allowing them to have family fun in an environment that expresses the love of God and will encourage family togetherness.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Guide those people who surrender their lives to Christ, to the church, where they will encounter the love of God with their the spiritual family.<br></h5>
+            </blockquote>
+
+        </div>
+        <div class="tab-pane fade" id="ayudah">
+          <div class="alert alert-dismissable alert-danger">
+            <h4>“For we are God’s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.”&nbsp;&nbsp;EPHESIANS 2:10</h4>
+          </div>
+          
+          <blockquote>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Professional Advice: In terms of labor, criminal, civil, family, or any situation that is happening in the community that affects the people, in order to facilitate their daily lives.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Advice on how to obtain, posess, and keep safe and updated all kinds of legal documents, which are vital for individuals and families.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Advice and guide people to the competent authorities: to provide a solution to particular issues that currently affect their lives.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Health aid &  advice: facilitate the approach to different centers and organizations that are able to give care and solution to their health problems.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-long-arrow-right"></i> Academic advice: which allows kids coursing elementary and Jr. High School to regularize in certain subjects where they have been struggling.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Conferences and advice in the early detection of addictions such as alcoholism, smoking and drugs, conducting them into rehabilitation centers.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Conferences, advice and guidance to avoid sex outside of marriage: avoiding its consequences such as diseases and pregnancy.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Promote the creation of indoor football teams: as a recreational alternative, which can serve as a distractor from addictions and vices of the world.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Celebration of holidays: that promote fellowship and recreation, allowing them to ease off for a moment in the midst of some troubled lifestyles.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-long-arrow-right"></i> Skills training: such as sewing, cooking, mechanics, embroidery, and other crafts that allow them to gain an extra income to their household economy.<br></h5>
+            </blockquote>
+        </div>
+        
+        <div class="tab-pane fade" id="motivos">
+          <div class="alert alert-dismissable alert-info">
+            <h4>"Call to me and I will answer you and tell you great and unsearchable things you do not know." &nbsp;&nbsp;Jeremiah 33:3</h4>
+          </div>
+          
+          <blockquote>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-hand-o-up"></i> 1.– The center is called "CASA ABIERTA(OPEN HOUSE)", open to quality of life. Pray that CASA ABIERTA´s testimony, serves to attract people to an encounter with Jesus and that God will help them to have quality of life.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-hand-o-up"></i> 2.- Let us pray that God provides finances for the rent, furniture and equipment needed to keep CASA ABIERTA functioning.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-hand-o-up"></i> 3.- We already have contact with the Government Health Center, and they will support us with a bus where women can have clinical analyses done. Also with conferences about family and personal hygiene. Pray for that relationship, that it can be strengthened and that we can make the most from their support.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-hand-o-up"></i> 4.– There is a christian couple that provides the community center with a doctor´s visit once a month and a broad range of medicines that can cover a vast number of illnesses. Pray for them, that God will always provide them, spiritually, physically and financially.<br></h5>
+              <h5 align="justify">
+                <i class="fa fa-2x fa-hand-o-up"></i> 5.– We need to bring speakers on addictions, sexuality and those topics where the youth are needy of guidance in order to improve their quality of life.Pray that God will provide those speakers and institutions that will support this.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-hand-o-up"></i> 6.- We are trying to establish contact with the State Ministry of Education and Culture(SEC), to support us in the registration and monitoring of children at school; also in the literacy of the community and in open education.Pray that God will open the doors from SEC and the Institute of Open Education in favor of preparing the kids and stop them from losing more school years.<br></h5>
+              <h5 align="justify">   
+                <i class="fa fa-2x fa-hand-o-up"></i> 7.– 
+                At CASA ABIERTA´s Bible School we already have an enrollment of 20 adults, 6 teenagers and 30 children from age 4 to 10. Pray for the teachers and for provision of furniture and equipment; currently classes are conducted with children sitting on the floor.<br></h5>
+              
+            </blockquote>
+        </div>
+        
+      </div><br>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ModalRpt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Casa Abierta Community Center - Reports</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-3"><!--  -->
+                <a href="{{=URL('static','rpt_casaabierta13.pdf?attachment')}}" class="btn btn-lg btn-outline" style="color:#ccc" onMouseOver="this.style.color='#6C6CE4'" onMouseOut="this.style.color='#ccc'">
+                    <i class="fa fa-download"></i>&nbsp;Download<br>2013 Report
+                </a>
+            </div>
+            <div class="col-md-3"><!--  -->
+                <a href="{{=URL('static','rpt_casaabierta13.pdf')}}" target='_blank' class="btn btn-lg btn-outline" style="color:#ccc" onMouseOver="this.style.color='#6C6CE4'" onMouseOut="this.style.color='#ccc'">
+                    <i class="fa fa-cloud"></i>&nbsp;Preview<br>2013 Report
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="ModalImgs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Casa Abierta Community Center</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='casaabierta_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+

@@ -1,0 +1,596 @@
+{{extend 'layout_en.html'}}
+
+<style type="text/css">
+
+  .map-container {
+    position: relative;
+    padding-bottom: 36.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.map-container iframe,  
+.map-container object, 
+.map-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  .pad{
+    position: relative;
+    
+    width: 200%;
+
+  }
+  .blue{
+    background-color: #445F78;
+  }
+  .hi{
+    
+    max-width: auto;
+
+  }
+  .navi{
+    background-color: white;
+  }
+
+  .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel.carousel-fade .item {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity:0;
+}
+
+.carousel.carousel-fade .active.item {
+  opacity:1;
+}
+
+.carousel.carousel-fade .active.left,   
+.carousel.carousel-fade .active.right {
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.carousel.carousel-fade .next,
+.carousel.carousel-fade .prev {
+  left: 0;
+  z-index: 1;
+}
+
+.carousel.carousel-fade .carousel-control {
+  z-index: 3;
+}
+
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #eee;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+    color: white;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 0px;
+    border-left: 1px solid #eee;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: #18bc9c;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eee;
+}
+.btn-outline {
+    margin-top: 15px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+.tooltip-inner {
+    max-width: 220px;
+    /* If max-width does not work, try using width instead */
+    width: 220px; 
+}
+.hola{
+      position: relative;
+      border-radius: 2px 2px 2px 2px;
+            background-color: white;
+
+      -webkit-box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+-moz-box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+box-shadow: 0px 0px 23px 0px rgba(22,3,31,0.84);
+    }
+</style>
+
+<!-- ############################### carousel    ################################  -->
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll">
+            <a id="up" href="#page-top" style="color:white">Top</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#portfolio" style="color:#7B8491">Meet us</a>
+        </li>
+        <li class="page-scroll">
+            <a id="idcontact" href="#about" style="color:#7B8491">Contact us</a>
+        </li>
+        <li class="page-scroll" >
+            <a href="#contact" style="color:#7B8491">Visit us</a>
+        </li>
+        
+    </ul>
+</nav>
+<div id="myCarousel" class="carousel slide carousel-fade hidden-xs" data-ride="carousel" data-interval="4000">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <div class="active item">
+            <img class="center-block" src="{{=URL('static/images','wl1.jpg')}}" alt="...">
+            <div id="cap1" class="carousel-caption" >
+              <h1>Antioquía</h1>
+              <h3>Only to Him we give praise</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img class="center-block" src="{{=URL('static/images','wl5.jpg')}}" alt="...">
+            <div class="carousel-caption">
+              <h1>Calvary</h1><h3>Only to Him we cry out</h3>
+            </div>
+        </div>
+        <div class="item">
+            <img class="center-block" src="{{=URL('static/images','wl3.jpg')}}" alt="...">
+            <div class="carousel-caption">
+              <h1>Chapel</h1><h3>Only in Him we rejoice</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+      <div class="col-md-8" id="portfolio">
+      <div class="page-header">
+                    <h1 id="container">Meet us</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    
+    <div class="col-md-8"> <!--Abro div para columna izquierda -->
+      <div class="col-md-12 hola">
+        <br>
+          <ul class="nav nav-tabs blue" style="margin-bottom: 15px;">
+            <li class="active"><a href="#creemos" data-toggle="tab">Our Beliefs:</a></li>
+            <li><a class="texto" href="#iglesia" data-toggle="tab">Our Church</a></li>
+            <li><a href="#pastor" data-toggle="tab">Our Pastor</a></li>
+            
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade " id="iglesia">
+              <h2 class="text-muted">Antioquía</h2>
+              <div class="row">
+                <div class="col-lg-4">
+                  <p class="text-muted" align="justify">
+                  We are a group of people who want to learn, love and enjoy in Christ Jesus.
+                  We want to be a friendly church where you and your family may receive love and direction from Jesus, our Lord and Savior.
+                  </p>
+                </div>
+                <div class="col-lg-8" style="padding-top:16px;">
+                  <img src="{{=URL('static/images','banner_antioquia.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="200px;">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-5">
+                  <p class="text-muted" align="justify">
+                  We are a church that comes together to give honor and glory to God the Father, God the Son and God the Holy Spirit, through the teaching of the Bible verse by verse.We rejoice in worshiping God through music and testimonies. 
+                  </p>
+                </div>
+                <div class="col-lg-7" align="justify">
+                  <p class="text-muted"> Testimonies of gratitude of the blessings from God to the families in church. We are a church that promotes Christian fellowship and harmony among believers, worshiping God through loving one another and intercession through prayer.With joy we hope that you can visit us; and even more that you wish to be part of the Antioquía Family.
+                  
+                  </p>
+                </div>
+
+              </div>
+              <hr>
+              <h2 class="text-muted">Calvary Chapel  <img src="{{=URL('static/images','dove.png')}}" height="39.6px;" width="60.6px;" alt="..."></h2>
+              <div class="row">
+                <div class="col-lg-5">
+                  <p class="text-muted" align="justify">
+                  In 1965, Pastor Chuck Smith began his ministry at Calvary Chapel Costa Mesa with just twenty-five people. From the beginning, Pastor Chuck welcomed all, young and old, without judgment, placing his emphasis on the teaching of the Word of God. His simple, yet sound, expositional biblical approach has helped millions better understand God’s Word.
+                  </p>
+                </div>
+                <div class="col-lg-7" align="justify">
+                  <p class="text-muted"> With a sincere concern for the lost, Pastor Chuck and Kay Smith made room in the church and their home for a generation of hippies and surfers; generating a movement of the Holy Spirit that spread from the West Coast to the East Coast, and now, throughout the world.<br><br>
+                  What began as a small local church has now grown into an international ministry of over 1600 fellowships throughout the world, all in the last 40 years.
+                  </p>
+                </div>
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="pastor">
+              <div class="row">
+                <div class="col-md-8">
+                  <h2 class="text-muted">Rubén Muñoz García</h2>
+                  <p class="text-muted" align="justify">With more than two decades of ministry behind him, God has allowed Ruben Muñoz to serve for his Kingdom as a pastor since October 1994, through the planting of three churches, and through the mobilization of missionaries serving as the Sonora regional office director for an international missionary agency. Currently he is the pastor of Antioquia Calvary Chapel, church God gave him the opportunity and privilege to found and serve since February 2004.
+                  </p>
+                </div>
+                  
+                <div class="col-md-4">
+                  <img src="{{=URL('static/images','pastor1.jpg')}}" alt="..." class="img-thumbnail">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5" style="padding-top:40px;">
+                  <img src="{{=URL('static/images','fam_munoz.jpg')}}" alt="..." class="img-thumbnail img-responsive" height="200px;">
+                </div>
+                <div class="col-md-7">
+                <h4 class="text-muted">A Word From Our Pastor:</h4><p class="text-muted" align="justify">
+                  "By the Grace of God, I recieved Jesus as my Saviour and Lord back in 1977 through my girlfriend, and now my wife Doris; God has blessed me greatly giving me a beautiful family with my wife Doris, my daughters Damaris and Maresa, and my son Ruben Jr. With great joy and pleasure my wife and I would like to have you as our guests and moreover, if God permits and you decide, to be a part of the Antioquia family."</p>
+                
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <blockquote>
+                      <p class="text-muted">"And this gospel of the kingdom will be preached in the whole world as a testimony to all nations, and then the end will come."</p>
+                      <small class="text-muted">Matthew 24:14</small>
+                    </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade active in" id="creemos">
+              <div class="row">
+                <div class="col-lg-12">
+                <img src="{{=URL('static/images','banner_bible2.jpg')}}" alt="..." class="img-responsive">
+                </div>
+              </div>
+              <p class="text-muted">
+              <a class="text-danger">Trinity</a>- We believe that there is one living and true GOD, eternally existing in three persons: The Father, the Son, and the Holy Spirit, equal in power and glory. We believe that the Trinity created all, upholds all, and governs all things.<br><br>
+
+              <a class="text-danger">God the Father</a>- We believe in the person of God the Father—an infinite, eternal, personal Spirit—perfect in holiness, wisdom, power, and love. We believe He concerns Himself mercifully in the affairs of men, hears and answers prayer, and saves from sin and death all those who come to Him through faith in Jesus Christ.<br><br>
+
+              <a class="text-danger">Jesus Christ</a>- We believe in the person of Jesus Christ, God’s only begotten Son, who was conceived by the Holy Spirit. We believe in His virgin birth, sinless life, miracles, teachings, substitutionary atoning death, bodily resurrection, ascension into heaven, perpetual intercession for His people, and personal, visible return to earth. <br><br>
+
+              <a class="text-danger">Second Coming</a>- We believe the Second Coming of Jesus Christ will be a personal, visible return to earth. The Second Coming will coincide with the establishment of His millennial kingdom, the resurrection, final judgment, eternal blessing of the righteous, and eternal condemnation of the wicked.<br><br>
+
+              <a class="text-danger">God the Holy Spirit</a>- We believe in the person of the Holy Spirit—that He proceeds forth from the Father and Son to convict the world of sin, righteousness, and judgment; that He does regenerate, sanctify, and empower for ministry all who believe the biblical gospel.<br><br>
+
+              <a class="text-danger">Bible</a>- We believe that the Scriptures, which consist of the Old and New Testaments, are the fully inspired Word of God without error in the original manuscripts, and the infallible rule of faith and practice. The Word of God is the foundation upon which the church operates, and the basis by which the church is governed. We believe that the 66 books of the Bible supersede any and all earthly law in precept and principle.<br><br>
+
+              <a href="{{=URL('default','Beliefs#main')}}"><b>More...</b></a>
+              </p>
+            </div>
+          </div> 
+      </div>
+
+      <br><br>
+      <div class="col-md-12" id="about">
+        <div class="page-header">
+                  <h1 id="container"><i class="fa fa-envelope-o fa-lg"></i>&nbsp; Contact us</h1>
+                  <h4>¿How can we pray for you?</h4>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="row-fluid">
+                <div class="col-lg-8">
+                    <!--para qu funcione el form se necesita lo que comentare -->
+                    <form action="#" enctype="multipart/form-data" method="post"> <!--Esta linea-->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name</label>
+                                <input name="nombre" type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name."> 
+                                <!-- poner en name, el nombre del campo tal como esta en la db -->
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>E-mal</label>
+                                <input name="correo" type="email" class="form-control" placeholder="E-mail" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone</label>
+                                <input name="telefono" type="tel" class="form-control" placeholder="Phone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea name="mensaje" rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <!-- tipo submir -->
+                                <input type="hidden" name="_formname" value="contact_form" />
+                                <!-- y esta otra ultima linea-->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+      
+
+      
+      
+    </div> <!--Cierra div columna izquierda -->
+    <br>
+
+    <div class="col-md-4" style="margin-top:-26px;"> <!-- Comienza div columna derecha-->
+        <div align="right" style="padding-bottom:5px;">
+          <a id="boton_refresh" href="#" data-toggle="tooltip" data-placement="left" title="Refresh Bible Verses"><i class="fa fa-spin fa-refresh"></i></a>
+        </div>
+
+        <!-- Llama al Load.html, donde estan los versos biblicos -->
+        <div id="div_load">
+          {{=LOAD( url=URL(c='default', f='load_en', user_signature=True), ajax=True)}}
+        </div>
+        
+        <div class="page-header">
+          <h2 id="container">Activities</h2>
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge">Saturday 6:00 PM</span>
+            Worship Service
+          </li>
+          <li class="list-group-item">
+            <span class="badge">Thursday 7:00 PM</span>
+            Bible School at <a href="{{=URL('default','Locations#casaabierta')}}" style="color:#5bc0de;">Casa Abierta</a> Community Center:
+          </li>
+          <li class="list-group-item">
+            <span class="badge">Wednesday 5:00 PM<br>&<br>Friday 9:00 AM</span>
+            Bible Study Groups <a href="{{=URL('default','DondeEstamos#casa')}}" style="color:#5bc0de;">@ Home</a>:<br><br>
+          </li>
+        </ul>
+
+        <div class="page-header">
+           <h2 id="container"><i class="fa fa-share-alt-square"></i>&nbsp; Connect</h2>
+        </div>
+        <ul class="list-inline">
+            <li>
+                <a href="https://www.facebook.com/antioquia.calvarychapel" target="_blank" class="btn-social btn-outline"><i class="fa fa-lg fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="http://instagram.com/antioquiacc" target="_blank" class="btn-social btn-outline"><i class="fa fa-lg fa-instagram"></i></a>
+            </li>
+        </ul>
+
+        <div class="page-header">
+                  <h2 id="container">Data</h2>
+        </div>
+        <h3>% Christians in Hermosillo:</h3>
+        <div class="progress progress-striped active" data-toggle="tooltip" title="7.1% Christian Evangelical - INEGI 2010">
+          <div class="progress-bar progress-bar-info" style="width: 7.1%" ></div>
+        </div>
+        <h3>% Christians in Mexico:</h3>
+        <div class="progress progress-striped active" data-toggle="tooltip" title="8.4% Christian Evangelical - U.S Center for World Mission">
+          <div class="progress-bar progress-bar-success" style="width: 8.4%" ></div>
+        </div>
+        <h3>% Unreached People in Mexico:</h3>
+        <div class="progress progress-striped active" data-toggle="tooltip" title="0.07% - Unreached: There is no indigenous community of believing Christians with adequate numbers and resources to evangelize their own people  - U.S Center for World Mission">
+          <div class="progress-bar" style="width: .5%"></div>
+        </div>
+        <h3>% Unreached People in India:</h3>
+        <div class="progress progress-striped active" data-toggle="tooltip" title="93% - Unreached: There is no indigenous community of believing Christians with adequate numbers and resources to evangelize their own people  - U.S Center for World Mission">
+          <div class="progress-bar progress-bar-warning" style="width: 93%"></div>
+        </div>
+        <h3>% Unreached People in China:</h3>
+        <div class="progress progress-striped active" data-toggle="tooltip" title="13% - Unreached: There is no indigenous community of believing Christians with adequate numbers and resources to evangelize their own people  - U.S Center for World Mission">
+          <div class="progress-bar progress-bar-danger" style="width: 13%"></div>
+        </div>
+
+        <a href="http://joshuaproject.net/" target="_blank"><h5 align="right">More Statistics...</h6></a>
+
+        
+    </div> <!-- Cierra div columna derecha -->
+
+
+    <div class="col-md-12" id="contact">
+        <div class="page-header">
+                  <h1 id="container"><i class="fa fa-map-marker fa-lg"></i>&nbsp; Visit us</h1>
+        </div>  
+        <div class="col-md-9">
+                <div class="map-container">
+                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=1+211+Jesús+García+83140+Hermosillo,SON,México"></iframe>
+                </div><br>
+        </div>
+        <div class="col-md-3">
+              <address>
+                <strong>Antioquía Calvary Chapel</strong><br>
+                Avenida Uno #211<br>
+                Col. Jesús García<br>
+                Hermosillo, Sonora, México<br>
+              </address>
+
+              <address>
+                <strong>Pastor Rubén Muñoz</strong><br>
+                <a href="mailto:#">antioquiacalvarychapel@hotmail.com</a>
+              </address>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+
+<br><br>
+
+{{if not request.args(0):}}<!--Si se entra sin args..osea no va redireccionado dentro de la pagina, sino accede por primera vez, muestra el script-->
+<script type="text/javascript">
+      window.onload = function() {
+          document.getElementById( 'trigger-overlay' ).click()
+        };
+</script>
+{{else:}}
+  {{if request.args(0) == 'form':}}
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById( 'idcontact' ).click()
+        };
+  </script>
+  {{else:}}
+  {{pass}}
+{{pass}}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#boton_refresh').click(function() {
+
+      web2py_component('{{=URL(c='default', f='load_en', user_signature=True)}}', target='div_load')
+
+      return false;
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  function changeZIndex(i,id) {
+  document.getElementById(id).style.zIndex=i;
+}
+  function changeColor(color) {
+  document.getElementById('up').style.color=color;
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/style10.css')}}" />
+<script src="{{=URL('static','js/snap.svg-min.js')}}"></script>
+<script src="{{=URL('static','js/modernizr.custom.js')}}"></script>
+  
+<button onclick="changeZIndex(-1,'myCarousel');changeColor('gray')" class="hidden" id="trigger-overlay" type="button">Open Overlay</button>
+    <!-- open/close -->
+    <div class="overlay overlay-boxes hidden-xs">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="101%" viewBox="0 0 1440 806" preserveAspectRatio="none">
+        <path d="m0.005959,200.364029l207.551124,0l0,204.342453l-207.551124,0l0,-204.342453z"/>
+        <path d="m0.005959,400.45401l207.551124,0l0,204.342499l-207.551124,0l0,-204.342499z"/>
+        <path d="m0.005959,600.544067l207.551124,0l0,204.342468l-207.551124,0l0,-204.342468z"/>
+        <path d="m205.752151,-0.36l207.551163,0l0,204.342437l-207.551163,0l0,-204.342437z"/>
+        <path d="m204.744629,200.364029l207.551147,0l0,204.342453l-207.551147,0l0,-204.342453z"/>
+        <path d="m204.744629,400.45401l207.551147,0l0,204.342499l-207.551147,0l0,-204.342499z"/>
+        <path d="m204.744629,600.544067l207.551147,0l0,204.342468l-207.551147,0l0,-204.342468z"/>
+        <path d="m410.416046,-0.36l207.551117,0l0,204.342437l-207.551117,0l0,-204.342437z"/>
+        <path d="m410.416046,200.364029l207.551117,0l0,204.342453l-207.551117,0l0,-204.342453z"/>
+        <path d="m410.416046,400.45401l207.551117,0l0,204.342499l-207.551117,0l0,-204.342499z"/>
+        <path d="m410.416046,600.544067l207.551117,0l0,204.342468l-207.551117,0l0,-204.342468z"/>
+        <path d="m616.087402,-0.36l207.551086,0l0,204.342437l-207.551086,0l0,-204.342437z"/>
+        <path d="m616.087402,200.364029l207.551086,0l0,204.342453l-207.551086,0l0,-204.342453z"/>
+        <path d="m616.087402,400.45401l207.551086,0l0,204.342499l-207.551086,0l0,-204.342499z"/>
+        <path d="m616.087402,600.544067l207.551086,0l0,204.342468l-207.551086,0l0,-204.342468z"/>
+        <path d="m821.748718,-0.36l207.550964,0l0,204.342437l-207.550964,0l0,-204.342437z"/>
+        <path d="m821.748718,200.364029l207.550964,0l0,204.342453l-207.550964,0l0,-204.342453z"/>
+        <path d="m821.748718,400.45401l207.550964,0l0,204.342499l-207.550964,0l0,-204.342499z"/>
+        <path d="m821.748718,600.544067l207.550964,0l0,204.342468l-207.550964,0l0,-204.342468z"/>
+        <path d="m1027.203979,-0.36l207.550903,0l0,204.342437l-207.550903,0l0,-204.342437z"/>
+        <path d="m1027.203979,200.364029l207.550903,0l0,204.342453l-207.550903,0l0,-204.342453z"/>
+        <path d="m1027.203979,400.45401l207.550903,0l0,204.342499l-207.550903,0l0,-204.342499z"/>
+        <path d="m1027.203979,600.544067l207.550903,0l0,204.342468l-207.550903,0l0,-204.342468z"/>
+        <path d="m1232.659302,-0.36l207.551147,0l0,204.342437l-207.551147,0l0,-204.342437z"/>
+        <path d="m1232.659302,200.364029l207.551147,0l0,204.342453l-207.551147,0l0,-204.342453z"/>
+        <path d="m1232.659302,400.45401l207.551147,0l0,204.342499l-207.551147,0l0,-204.342499z"/>
+        <path d="m1232.659302,600.544067l207.551147,0l0,204.342468l-207.551147,0l0,-204.342468z"/>
+        <path d="m-0.791443,-0.360001l207.551163,0l0,204.342438l-207.551163,0l0,-204.342438z"/>
+      </svg>
+      
+      <button onclick="changeZIndex(1,'myCarousel');changeColor('white')" type="button" class="overlay-close">
+          <div class="lr">
+                    <div class="rl">
+                    </div></div>
+            </button>
+      <nav>
+        <ul>
+          <li><a href="#"><img src="{{=URL('static/images','dove__.png')}}" alt="..."></a></li>
+          <li><a href="{{=URL('default','PeaceWithGod')}}" target="_blank">Meet Jesus Today &nbsp;<i class="fa fa-arrow-right"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="{{=URL('static','js/classie.js')}}"></script>
+    <script src="{{=URL('static','js/demo10.js')}}"></script>

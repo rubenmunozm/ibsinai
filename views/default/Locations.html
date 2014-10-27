@@ -1,0 +1,131 @@
+{{extend 'layout_en.html'}}
+<style type="text/css">
+  .map-container {
+    position: relative;
+    padding-bottom: 36.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.map-container iframe,  
+.map-container object, 
+.map-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<!-- ############################### navbar ################################  -->
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll">
+            <a id="up" href="#page-top" style="color:white">Top</a>
+        </li>
+        <li class="page-scroll">
+            <a href="#church" style="color:#7B8491">Church</a>
+        </li>
+        <li class="page-scroll">
+            <a id="idcontact" href="#casaabierta" style="color:#7B8491">Community Center</a>
+        </li>
+        <li class="page-scroll" >
+            <a href="#casa" style="color:#7B8491">Homes</a>
+        </li>
+        
+    </ul>
+</nav>
+<!-- ############################### navbar ends ################################  -->
+<div class="container-fluid">
+  <div class="row-fluid" id="church">
+    <div class="col-md-12">
+            <div class="page-header">
+                      <h1 id="container"><i class="fa fa-map-marker fa-lg"></i>&nbsp; Antioquía Calvary Chapel</h1>
+            </div>  
+            <div class="col-md-9">
+                    <div class="map-container">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=1+211+Jesús+García+83140+Hermosillo,SON,México"></iframe>
+                    </div><br>
+            </div>
+            <div class="col-md-3">
+                  <address>
+                    <strong>Antioquía Calvary Chapel</strong><br>
+                    Avenida Uno #211<br>
+                    Col. Jesús García<br>
+                    Hermosillo, Sonora, México<br>
+                  </address>
+
+                  <address>
+                    <strong>Pastor Rubén Muñoz</strong><br>
+                    <a href="mailto:#">antioquiacalvarychapel@hotmail.com</a>
+                  </address>
+            </div>
+    </div>
+
+    <div class="col-md-12" id="casaabierta">
+            <div class="page-header">
+                      <h1 id="container"><i class="fa fa-map-marker fa-lg"></i>&nbsp;&nbsp;<a style="color:#ebebeb;" href="{{=URL('default','CasaAbierta_en')}}">Casa </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','CasaAbierta_en')}}">Abierta </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','CasaAbierta_en')}}">Community </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','CasaAbierta_en')}}">Center</a></h1>
+            </div>  
+            <div class="col-md-9">
+                    <div class="map-container">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=San+Vicente,+Fraccionamiento+Villa+Verde+Sección+IV,+SON,México"></iframe>
+                    </div><br>
+            </div>
+            <img style="padding-left:15px;" src="{{=URL('static/images','casa_loc.png')}}" alt="..." class="img-rounded img-responsive" >
+            <div class="col-md-3">
+                  <address>
+                    <strong></strong><br>
+                    San Vicente Nº. 137<br>
+                    Col. Villa Verde<br>
+                    Hermosillo, Sonora, México<br>
+                  </address>
+            </div>
+
+    </div>
+
+    <div class="col-md-12" id="casa">
+            <div class="page-header">
+                      <h1 id="container"><i class="fa fa-map-marker fa-lg"></i>&nbsp;&nbsp;<a style="color:#ebebeb;" href="{{=URL('default','BibleStudies')}}">Bible </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','BibleStudies')}}">Study </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','BibleStudies')}}">Groups </a>
+                      <a style="color:#ebebeb;" href="{{=URL('default','BibleStudies')}}">@ Home</a></h1>
+            </div>  
+            <div class="col-md-4">
+                    <div class="map-container">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=Los+Nogales+34,+Fuentes+del+Mezquital,+83240+Hermosillo,+SON,México"></iframe>
+                    </div><br>
+            </div>
+            <div class="col-md-2">
+                  <address>
+                    <strong></strong><br> 
+                    Los nogales Nº. 34<br>
+                    Col. Las fuentes<br>
+                    Hermosillo, Sonora, México<br>
+                  </address>
+            </div>
+            <div class="col-md-4">
+                    <div class="map-container">
+                    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtl1u4nvhvl7Ei03TtG3l_U9_C0lpPf2A&q=Milán,+Hermosillo,+SON,México"></iframe>
+                    </div><br>
+            </div>
+            <div class="col-md-2">
+                  <address>
+                    <strong></strong><br> 
+                    Villa del Norte Nº 72 <br>
+                    Col. Residencial Milán<br>
+                    Hermosillo, Sonora, México<br>
+                  </address>
+            </div>
+
+    </div>
+
+
+  </div>
+</div>
+<br>
+
+<!-- ############################## MODALS  ###########-->

@@ -1,0 +1,180 @@
+{{extend 'layout_b.html'}}
+<script type="text/javascript" src="https://sandbox.google.com/checkout/inapp/lib/buy.js"></script>
+<style type="text/css">
+	.divl{
+		position: absolute; top: 0px; left: 0;
+
+	}
+	.secondary_banner {
+	 width: 100%; height: 465px; text-align: center;
+	 background: rgba(246,246,246,1);
+background: -moz-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,246,246,1)), color-stop(80%, rgba(59,77,93,1)), color-stop(87%, rgba(43,62,80,1)));
+background: -webkit-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -o-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: -ms-linear-gradient(top, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+background: linear-gradient(to bottom, rgba(246,246,246,1) 0%, rgba(59,77,93,1) 80%, rgba(43,62,80,1) 87%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#2b3e50', GradientType=0 );
+
+
+	 overflow: hidden; 
+	}
+</style>
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll" >
+            <a id="up" href="#page-top" style="color:#7B8491;">Ir Arriba</a>
+        </li>
+        
+    </ul>
+</nav>
+
+<div class="row-fluid">
+<div class="divl secondary_banner">
+ 	<div style="top:7%;" class="navbar navbar-success navbar-default">
+          <div style="padding-left:8%;" class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><br>
+            
+            
+            <a class="navbar-brand" href="{{=URL('default','index',args=['nav'])}}">Antioquía Calvary Chapel</a>
+            <a class="hidden-xs hidden-sm hidden-md" style="padding-right:70%;"  href="{{=URL('default','index', args=['nav'])}}"><img src="{{=URL('static/images','dove_.png')}}" alt="..."></a>
+          </div>
+          <div align="left" style="padding-left:9%;" class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{=URL('default','index',args=['nav'])}}"><i class="fa fa-home fa-2x"></i></a></li>
+              <li><a href="{{=URL('default','QuienesSomos')}}" style="color:#5CB85C; font-size:17px;"><strong> Quiénes Somos</strong></a></li>
+              <li><a href="{{=URL('default','DondeEstamos')}}" style="color:#5CB85C; font-size:17px;">Dónde Estamos</a></li>
+              <li><a href="{{=URL('default','Creemos')}}" style="color:#5CB85C; font-size:17px;">En qué Creemos</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Ministerios</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','CasaAbierta')}}" style="font-size:15px;">Centro Comunitario Casa Abierta</a></li>
+                  <li><a href="{{=URL('default','EstudiosBiblicos')}}"style="font-size:15px;">Estudios Bíblicos en Casa</a></li>
+                  <li><a href="{{=URL('default','web')}}"style="font-size:15px;" >Desarrollo Web</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#5CB85C; font-size:17px;">Recursos</a>
+                <ul class="dropdown-menu">
+                  <li><a href="{{=URL('default','imagenes')}}" style="font-size:15px;">Imágenes</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" style="font-size:15px;" data-toggle="modal" data-target="#ModalIglesias">Iglesias en Sonora</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#ModalBiblias" style="font-size:15px;">Biblias en Linea</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://www.calvarychapel.com" target="_blank" style="font-size:15px;">Calvary Chapel</a></li>
+                  <li><a href="http://www.ibccmexico.com/tablet/index.html" target="_blank" style="font-size:15px;">Insituto Bíblico Capilla Calvario México</a></li>
+                  
+                </ul>
+              </li>
+
+              <li><a href="{{=URL('default','PazConDios')}}" target="_blank" style="color:#EA3636; font-size:17px;">Ten Paz Con Dios</a></li>
+              <li ><a href="#" style="color:#5CB85C; font-size:17px;" data-toggle="modal" data-target="#ModalDonar">Donar</a></li>
+            </ul>
+            
+            <ul style="padding-right:9%;" class="nav navbar-nav navbar-right">
+              <li><a href="{{=URL('default','index',args=['nav'])}}"><img class="center-block"  src="{{=URL('static/images','es_.png')}}" alt="..."></a></li>
+              <li><a href="{{=URL('default','index_en')}}"><img class="center-block"  src="{{=URL('static/images','en_.png')}}" alt="..."></a></li>
+            </ul>
+          </div>
+        </div>
+
+	<img style="padding-top:12px;" src="{{=URL('static/images','donation.jpg')}}" width="60%"alt="Ways to Give">
+</div>
+</div>
+
+<div style="padding-top:20%" class="row-fluid">
+	<div class="col-md-8 col-md-offset-1">
+		<div class="page-header">
+                    <h1 >GRACIAS POR TU APOYO</h1>
+      </div>
+      <p style="font-size:105%;" align="justify">Cuando Dios nos dio la visión de fundar la iglesia Antioquia Calvary Chapel, nos mostró la necesidad de llevar su palabra hasta lo último de la tierra, no importando el tamaño de la iglesia en cuanto a miembros, sino a la visión dada por Dios.<br><br>
+      Conscientes de la necesidad de llevar la palabra de Dios, como palabra de esperanza tanto a las naciones como a las familias hermosillenses, en el tiempo que tiene la iglesia hemos apoyado económicamente a distintos misioneros y de la misma iglesia ya salió un hermano por dos años sirviendo a un ministerio misionero por el cual recorrió 30 países llevando ayuda humanitaria y palabra de esperanza, sostenido económicamente por la iglesia y distintos apoyadores.<br><br>
+      También estamos conscientes de que para servir en los ministerios de la iglesia se requiere de una economía que permita tanto solventar los gastos de la iglesia como los ministerios de la misma y estamos totalmente convencidos de que Dios es el proveedor de todo ello y que utiliza a sus hijos para alcanzar la visión dada por Él.<br><br>
+      Si decides apoyar, estaremos agradecidos con Dios y por supuesto contigo, en el entendido de que actualmente estamos enfocados en el centro comunitario <a style="color:#339A77" href="{{=URL('default','CasaAbierta')}}"> "CASA ABIERTA"</a> .
+      En CASA ABIERTA se requiere de llevar palabra de esperanza pero también de proveer de bendiciones materiales a la gente que se está acercando a Dios, por ello te animamos a participar con tu apoyo de este ministerio.<br><br>
+      GRACIAS
+      </p><br>
+      <div class="row">
+        <div align="center" class="col-md-6">
+          <p style="color:#5CB85C">"Rogándonos con insistencia 
+          que les concediéramos el privilegio de tomar parte 
+          en esta ayuda para los santos."<br>
+          2 CORINTIOS 8:4
+          </p>
+        </div>
+        <div align="center" class="col-md-6">
+          <p style="color:#5CB85C">"No digo esto porque esté tratando de conseguir más ofrendas,  
+          sino que trato de aumentar el crédito a su cuenta."<br>
+          FILIPENSES 4:17
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <h3 style="color:#C55F9C"><i style="color:#6C6CE4" class="fa fa-google-wallet fa-2x"></i> Dona Vía <a href="https://www.google.com/wallet/" target="_blank" style="color:#6C6CE4">Google Wallet</a></h3>
+      <p style="font-size:105%;" align="justify">Compra en aplicaciones móviles y sitios web en tan sólo dos clics. No hay necesidad de llenar formularios largos manualmente - sólo tiene que buscar el boton de Comprar con Google Wallet. Crea una cuenta de Google Wallet para empezar. Si alguna vez has comprado algo en Google Play, que ya tienes una cuenta de Wallet.</p>
+      <a class="btn btn-success" data-toggle="tooltip" title="Método De Pago En Construcción">Donate</a>
+      <!-- data-toggle="modal" data-target="#ModalDonar" ##para cuando el boton sirva -->
+
+      <hr>
+      <h3 style="color:#C55F9C"><i style="color:#6C6CE4" class="fa fa-credit-card fa-lg"></i>&nbsp; Dona Vía Cuenta de Banco</h3><div class="row">
+        <div class="col-md-6">
+          <p style="font-size:105%;" align="justify">Cuenta En México:<br><br>
+          <strong>Orden De Pago Internacional</strong> <br>
+          SWIFT MBCOMXMM<br>
+          Scotiabank Inverlat S.A.<br>
+          Nº De Cuenta: 110 0631 5453<br>
+          Sucursal: San Benito<br>
+          Blvd. Luis Encinas y Americas<br>
+          Col. San Benito C.P. 83190<br>
+          Hermosillo, Sonora, México<br><br>
+          <strong>Transferencia De Otro Banco</strong> <br>
+          Banco: Scotiabank<br>
+          Nombre: Rubén Muñoz García<br>
+          Clave: 044 770 110 063 154 535
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p style="font-size:105%;" align="justify">Cuenta En EUA:<br><br>Ruben Muñoz Garcia<br> 
+          Bank Of America<br>
+          Nº De Enrutamiento: 026009593 (transferencia por cable)<br>
+          Nº De Cuenta: 0046 5542 6721<br>
+          Sucursal: Nogales, Arizona<br>
+          112 N. GRAND AVENUE 
+          85621, AZ.
+          </p>
+        </div>
+      </div>
+      <br>
+	</div>
+	<div style="padding-top:10%; padding-left:3%;" class="col-md-2 hidden-xs hidden-sm">
+    <img src="{{=URL('static/images','dona1.jpg')}}" alt="..." class="img-rounded" height="160px;" width="160px;"><br><br><br><br><br>
+    <img src="{{=URL('static/images','dona2.jpg')}}" alt="..." class="img-rounded" height="160px;" width="160px;"><br><br><br><br><br>
+    <img src="{{=URL('static/images','dona4.jpg')}}" alt="..." class="img-rounded" height="160px;" width="160px;">
+    <br><br><br><br><br>
+    <img src="{{=URL('static/images','dona3.jpg')}}" alt="..." class="img-rounded" height="160px;" width="160px;">
+    <br><br><br><br><br>
+    <img src="{{=URL('static/images','dona5.jpg')}}" alt="..." class="img-rounded" height="160px;" width="160px;">
+    
+  </div>
+</div>
+
+{{if request.args(0):}}<!--Si se entregan args..osea va redireccionado con cantidad $$-->
+<script type="text/javascript">
+        
+        window.onload = function() {
+            google.payments.inapp.buy({
+              parameters: {},
+              jwt: {{=XML(response.json(cakeToken))}},
+              success: function() { window.alert('Donación realizada, Dios te bendiga.') },
+              failure: function() { window.alert('Error - No se realizó la donación.') }
+            });
+            return false;
+          };
+  </script>
+{{else:}}
+{{pass}}

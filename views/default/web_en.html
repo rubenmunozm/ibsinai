@@ -1,0 +1,58 @@
+{{extend 'layout_en.html'}}
+<link href="{{=URL('static','css/inputs.css')}}" rel="stylesheet">
+
+<div id="meet" class="row">
+<h1>Web Development Ministry</h1>
+	<p>By His grace, God has given to our church different gifts, one of which is web development, so and in obedience to our God we put at the service of the Christian community, churches and Christian ministries whose purpose is to take the word of God to the nations. 
+
+In order to sustain this ministry without being a burden for our church and considering that as God gave the vision also will give the provision, we believe for the better operation of this ministry, to do web development through financial donations that will undoubtedly be both a blessing to the Christian community as to the operation of the ministry. 
+It will be for our church and for the ministry leader, a privilege to serve for the Kingdom of God through your church. 
+
+Please contact us through this page or via email (antioquiacalvarychapel@hotmail.com).
+</p>
+</div>
+<div class="row" >
+<h1>Contact Us</h1>
+<form action="#" enctype="multipart/form-data" method="post"> <!--Esta linea-->
+  <span>
+    <input type="text" required data-validation-required-message="Please enter a name." name="nombre" class="slide-up" id="name" placeholder="Write your name" /><label for="name">Name</label>
+  </span>
+  <span>
+    <input type="email" required data-validation-required-message="Please enter your email address." name="correo" class="slide-up" id="email" placeholder="E-mail to contact you" /><label for="phone">E-mail</label>
+  </span>
+  <span>
+    <input type="tel" required data-validation-required-message="Please enter your phone number." name="telefono"class="slide-up" id="phone" placeholder="Phone # to contact you" /><label for="phone">Phone</label>
+  </span><br>
+  <textarea class="txt" name="mensaje" rows="5" class="form-control" placeholder="Leave your message..." id="message" required data-validation-required-message="Please enter a message."></textarea>
+  
+  
+  
+</div>
+<div class="row">
+  <button type="submit" class="btn-block btn-info" style="background:#7AB893">Send Message</button>
+  <input type="hidden" name="_formname" value="contact_form" />
+</div>
+</form>
+<style type="text/css">
+
+  
+
+	#footerbef{
+		background-color: #4e5d6c;
+	}
+	#footeraft{
+		background-color: #2b3e50;
+	}
+  #developer{
+    background-color: #4e5d6c;
+  }
+  .txt{
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  }
+</style>

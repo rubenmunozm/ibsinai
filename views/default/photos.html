@@ -1,0 +1,323 @@
+{{extend 'layout_en.html'}}
+<nav class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right " style="padding-right:90px;">
+        <li class="page-scroll" style="padding-right:30%">
+            <a id="up" href="#page-top" style="color:white">Top</a>
+        </li>
+        
+        
+    </ul>
+</nav>
+
+<div class="container-fluid" >
+  <div class="row-fluid" >
+    <h1>Photos Of Ministries , Events and Mission Trips </h1>
+    <hr>
+
+    <div class="jumbotron">
+      <h2 align="center">Albums</h2><br>
+        <div class="row">
+          <div align="center" class="col-md-3">
+            <img src="{{=URL('static/images','dona1.jpg')}}" data-toggle="modal" data-target="#ModalImgs" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer">
+            <h4 data-toggle="modal" data-target="#ModalImgs" style="cursor:pointer">Casa Abierta<br>Community Center</h4>
+          </div>
+
+          <div align="center" class="col-md-3">
+            <img src="{{=URL('static/images','dona2.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalHospital">
+            <h4 data-toggle="modal" data-target="#ModalHospital" style="cursor:pointer">Hospital</h4>
+          </div>
+
+          <div align="center" class="col-md-3">
+            <img src="{{=URL('static/images','alb_lh.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalIndexLH">
+            <h4 style="cursor:pointer" data-toggle="modal" data-target="#ModalIndexLH">Logos Hope Ship</h4>
+          </div>
+
+          <div align="center" class="col-md-3">
+            <img  src="{{=URL('static/images','dona3.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalFut">
+            <h4 style="cursor:pointer" data-toggle="modal" data-target="#ModalFut">Soccer Tournaments</h4>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div align="center" class="col-md-4">
+                <img  src="{{=URL('static/images','album_proy.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalProy">
+                <h4 style="cursor:pointer" data-toggle="modal" data-target="#ModalProy">Jesus Film<br>Open Air Projection</h4>
+            </div>
+
+            <div align="center" class="col-md-4">
+                <img src="{{=URL('static/images','album_comp.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer"data-toggle="tooltip" title="Album Under Construction">
+                <h4 style="cursor:pointer">Fellowship</h4>
+            </div>
+
+            <div align="center" class="col-md-4">
+                <img src="{{=URL('static/images','album_orf.jpg')}}" alt="..." class="img-thumbnail" height="160px;" width="160px;" style="cursor:pointer"data-toggle="tooltip" title="Album Under Construction">
+            <h4 style="cursor:pointer" data-toggle="modal" data-target="#ModalTest">Jinezeki Orphanage</h4>
+            </div>
+        </div>
+
+
+        </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ################################# SUB MODAL INDEX LOGOS HOPE ####################-->
+
+<div class="modal fade" style="" id="ModalIndexLH" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Missionary From Antioquia Onboard Logos Hope Ship</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4" align="center">
+                <img onclick="Closemodal()" src="{{=URL('static/images','alb_lhlib.jpg')}}" alt="..." class="img-thumbnail" height="120px;" width="120px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalLHlib">
+                <h5 style="cursor:pointer" data-toggle="modal" data-target="#ModalLHlib">Liberia<br><small>Construction Project on Elementary School</small></h5>
+            </div>
+
+            <div class="col-md-4" align="center">
+                <img onclick="Closemodal()" src="{{=URL('static/images','alb_lhguy.jpg')}}" alt="..." class="img-thumbnail" height="120px;" width="120px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalLHguy">
+                <h5 style="cursor:pointer" data-toggle="modal" data-target="#ModalLHguy">Guyana<br><small>Construction Project<br> 'Habitat For Humanity'</small></h5>
+            </div>
+
+            <div class="col-md-4" align="center">
+                <img onclick="Closemodal()" src="{{=URL('static/images','alb_lhten.jpg')}}" alt="..." class="img-thumbnail" height="120px;" width="120px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalLHten">
+                <h5 style="cursor:pointer" data-toggle="modal" data-target="#ModalLHten">Canary Islands<br><small>MC at Cultural Event</small></h5>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2" align="center">
+                <img onclick="Closemodal()" src="{{=URL('static/images','alb_lhtrab.jpg')}}" alt="..." class="img-thumbnail" height="120px;" width="120px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalLHtra">
+                <h5 style="cursor:pointer" data-toggle="modal" data-target="#ModalLHtra">Work Onboard</h5>
+            </div>
+
+            <div class="col-md-4" align="center">
+                <img onclick="Closemodal()" src="{{=URL('static/images','alb_lhmin.jpg')}}" alt="..." class="img-thumbnail" height="120px;" width="120px;" style="cursor:pointer" data-toggle="modal" data-target="#ModalLHmin">
+                <h5 style="cursor:pointer" data-toggle="modal" data-target="#ModalLHmin">Ministries</h5>
+            </div>
+
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button id="btnXLH" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN INDEX LH-->
+
+<!-- ################################  MODALS ALBUMES ##############################-->
+
+                            <!--  CASA ABIERTA -->
+
+<div class="modal fade bs-example-modal-lg" id="ModalImgs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Casa Abierta Community Center</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='casaabierta_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ################# -->
+                                <!--  Hospital -->
+<div class="modal fade bs-example-modal-lg" id="ModalHospital" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Hospital Ministry</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='hospital_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  ############### FIN HOSPITAL ###############-->
+
+<!--  Proyeccion Pelicula Jesus -->
+<div class="modal fade bs-example-modal-lg" id="ModalProy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Jesus Film Open Air Projection</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='pelicula_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ######## FIN PELICULA ######### -->
+
+
+<!--  Torneo Futbol -->
+<div class="modal fade bs-example-modal-lg" id="ModalFut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Soccer Ministry</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='futbol_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ################# -->
+
+<!--####################################### SUBMODALS LOGOSHOPE ###########################################-->
+
+<!--  LH LIBERIA -->
+<div class="modal fade bs-example-modal-lg" id="ModalLHlib" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Liberia - Construction Project on Elementary School</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='lhliberia_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ####### FIN LIBERIA ########## -->
+
+<!--  LH Guyana -->
+<div class="modal fade bs-example-modal-lg" id="ModalLHguy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Guyana - Construction Project 'Habitat For Humanity'</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='lhguyana_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ######## FIN GUYANA######### -->
+
+<!--  LH TENERIFE -->
+<div class="modal fade bs-example-modal-lg" id="ModalLHten" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Canary Islands - MC at Cultural Event</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='lhtenerife_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ######### FIN TENERIFE ######## -->
+
+<!--  LH TRABAJO -->
+<div class="modal fade bs-example-modal-lg" id="ModalLHtra" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Work Onboard</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='lhtrabajo_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ######## LH TRABAJO FIN ######### -->
+
+<!--  LH MINISTERIO -->
+<div class="modal fade bs-example-modal-lg" id="ModalLHmin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ministries Onboard Logos Hope</h4>
+      </div>
+      <div class="modal-body">
+        
+        {{=LOAD( url=URL(a='imgs', c='default', f='lhministerio_en', user_signature=True), ajax=True, content= IMG(_src=URL(request.application,'static','images/301.GIF')) )}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ################# -->
+
+
+<script type="text/javascript">
+  function Closemodal() {
+  document.getElementById('btnXLH').click()
+}
+</script>

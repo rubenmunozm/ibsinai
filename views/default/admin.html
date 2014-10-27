@@ -1,0 +1,176 @@
+{{extend 'layout.html'}}
+
+<style type="text/css">
+.ui-jqgrid tr.jqgrow td {
+    height: 70px;
+    white-space: normal;
+}
+   th.ui-th-column div{
+        white-space:normal !important;
+        height:auto !important;
+        padding:2px;
+    }  
+
+</style>
+<style type="text/css">
+  .box{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 2px solid #18bc9c;/*gris-8f8d8f verde(navbar)-18bc9c*/
+    background-color: #2c3e50;
+    -webkit-box-shadow: -8px 10px 14px -3px rgba(189,179,189,1);
+    -moz-box-shadow: -8px 10px 14px -3px rgba(189,179,189,1);
+    box-shadow: -8px 10px 14px -3px rgba(189,179,189,1);
+  }
+
+</style>
+
+<script type="text/javascript" >
+jQuery(document).ready(function(){
+  jQuery("#list").jqGrid({
+    url:'{{=URL(r=request,f='call',args=['json','get_rows'])}}',
+    data: "{}",
+    datatype: 'json',
+    mtype: 'GET',
+    contentType: "application/json; charset=utf-8",
+    cellEdit: false,
+    cellsubmit:'remote',
+    cellurl: '{{=URL(r=request,f='call',args=['json','save_cell'])}}',
+    complete: function(jsondata, stat) {
+        if (stat == "success") {
+            var thegrid = jQuery("#list")[0];
+            thegrid.addJSONData(JSON.parse(jsondata.responseText).d);
+        }
+    },
+
+    
+    
+
+    colNames:['Recibido','Nombre','Correo','Telefono','Mensaje',''],
+    colModel :[
+      {name:'created_on', index:'created_on',editable:false, width:150,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'nombre', index:'nombre',editable:false, width:150,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'correo', index:'correo',editable:false, width:150,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'telefono', index:'telefono',editable:false, width:150,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'mensaje', index:'mensaje',editable:false, width:400,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'eliminar', index:'eliminar',editable:false, width:100,searchoptions:{sopt:['cn', 'nc']}},
+      
+      
+    ],
+    pager: '#pager',
+    rowNum:5,
+    rowList:[5,10,20],
+    sortname: 'created_on',
+    sortorder: 'desc',
+    viewrecords: true,
+    caption: 'Mensajes recibidos',
+    altRows:true,
+    height: 'auto',
+    width: 'auto',
+    
+ 
+  });
+
+
+
+});
+</script>
+
+<script type="text/javascript" >
+jQuery(document).ready(function(){
+  jQuery("#list_versos").jqGrid({
+    url:'{{=URL(r=request,f='call',args=['json','get_rows_versos'])}}',
+    data: "{}",
+    datatype: 'json',
+    mtype: 'GET',
+    contentType: "application/json; charset=utf-8",
+    cellEdit: true,
+    cellsubmit:'remote',
+    cellurl: '{{=URL(r=request,f='call',args=['json','save_cell_versos'])}}',
+    complete: function(jsondata, stat) {
+        if (stat == "success") {
+            var thegrid = jQuery("#list")[0];
+            thegrid.addJSONData(JSON.parse(jsondata.responseText).d);
+        }
+    },
+
+    colNames:['#','Verso','Cita',''],
+    colModel :[
+      
+      {name:'numero', index:'numero',editable:false, width:30,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'verso', index:'verso',editable:true, width:850,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'cita', index:'cita',editable:true, width:120,searchoptions:{sopt:['cn', 'nc']}},
+      {name:'eliminar', index:'eliminar',editable:false, width:100,searchoptions:{sopt:['cn', 'nc']}},
+      
+    ],
+    pager: '#pager_versos',
+    rowNum:5,
+    rowList:[5,10,20],
+    sortname: 'numero',
+    sortorder: 'asc',
+    viewrecords: true,
+    caption: 'Versos Bíblicos',
+    altRows:true,
+    height: 'auto',
+    width: 'auto',
+    
+ 
+  });
+
+
+
+});
+</script>
+
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#msg" data-toggle="tab">Mensajes Recibidos</a></li>
+  <li class=""><a href="#vb" data-toggle="tab">Versos Bíblicos</a></li>
+  <li class=""><a href="#visits" data-toggle="tab">Visitas a la Página</a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active in" id="msg">
+      <hr>
+      <div class="row box">
+      <br>
+        <div class="span12" style="margin-left:32px;">
+        <table id="list"></table>
+        <div id="pager"></div>
+        <br>
+        </div>
+      </div><br>
+  </div>
+
+  <div class="tab-pane fade" id="vb">
+    
+    <hr>
+    <div class="row box"><br>
+      <div class="span12" style="margin-left:32px;">
+      <table id="list_versos"></table>
+      <div id="pager_versos"></div>
+      <br>
+      </div>
+    </div><br>
+  </div>
+
+  
+
+  <div class="tab-pane fade" id="visits">
+    <hr>
+    <div class="row box"><br>
+      <div class="span12" style="margin-left:32px;">
+        <h3><i class="fa fa-line-chart fa-2x"></i>&nbsp;&nbsp;Visitas a la página: <b> {{=visits.visits}}</b></h3>
+        <h6>Desde 11/10/2014 <small>(anterior a esa fecha 400 +)</small></h6>
+        <br>
+      </div>
+    </div><br>
+
+  </div>
+  
+</div>
+
+
+
