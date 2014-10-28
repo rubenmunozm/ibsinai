@@ -14,8 +14,7 @@ import math
 import random
 from gluon.debug import dbg
 #dbg.set_trace() # stop here!
-def demo():
-  return locals()
+
 def index():
   if request.args(0):
       now = int(time.time())
@@ -44,33 +43,6 @@ def index():
       response.flash = 'form has errors'
   return locals()
 
-def index_en():
-  if request.args(0):
-      now = int(time.time())
-      cakeToken = jwt.encode(
-      {
-      "iss":"07698772005655753885",
-      "aud":"Google",
-      "typ":"google/payments/inapp/item/v1",
-      "iat":now,
-      "exp":now + 3600,
-      "request":{
-        "currencyCode":"USD",
-        "price":request.args(0),
-        "name":"Donation",
-        "sellerData":"Antioquia Calvary Chapel",
-        "description":"Gift to Antioquia Calvary Chapel church"
-        }
-      },"Th-H-LlhHhn9jB9_c_aV3A")
-  else:
-    pass
-
-  form = SQLFORM(db.mensajes)
-  if form.process(session=None, formname='contact_form').accepted:
-      response.flash = 'form accepted'
-  elif form.errors:
-      response.flash = 'form has errors'
-  return locals()
 
 def tiendita():
   return locals()
@@ -84,65 +56,8 @@ def web():
       response.flash = 'form has errors'
   return locals()
 
-def web_en():
-  form = SQLFORM(db.mensajes)
-  response.flash = "hola mundo"
-  if form.process(session=None, formname='contact_form').accepted:
-      response.flash = 'form accepted'
-  elif form.errors:
-      response.flash = 'form has errors'
-  return locals()
 
 def imagenes():
-  return locals()
-
-def photos():
-  return locals()
-
-def donar():
-  if request.args(0):
-      now = int(time.time())
-      cakeToken = jwt.encode(
-      {
-      "iss":"07698772005655753885",
-      "aud":"Google",
-      "typ":"google/payments/inapp/item/v1",
-      "iat":now,
-      "exp":now + 3600,
-      "request":{
-        "currencyCode":"USD",
-        "price":request.args(0),
-        "name":"Donativo",
-        "sellerData":"Antioquia Calvary Chapel",
-        "description":"Donación a Iglesia Antioquia Calvary Chapel"
-        }
-      },"Th-H-LlhHhn9jB9_c_aV3A")
-  else:
-    pass
-  
-  return locals()
-
-def donate():
-  if request.args(0):
-      now = int(time.time())
-      cakeToken = jwt.encode(
-      {
-      "iss":"07698772005655753885",
-      "aud":"Google",
-      "typ":"google/payments/inapp/item/v1",
-      "iat":now,
-      "exp":now + 3600,
-      "request":{
-        "currencyCode":"USD",
-        "price":request.args(0),
-        "name":"Donation",
-        "sellerData":"Antioquia Calvary Chapel",
-        "description":"Gift to Antioquia Calvary Chapel church"
-        }
-      },"Th-H-LlhHhn9jB9_c_aV3A")
-  else:
-    pass
-  
   return locals()
 
 def load():
@@ -159,48 +74,19 @@ def load():
   verso_biblico3 = db(db.versos_biblicos.numero == random3).select(db.versos_biblicos.ALL).first()
   return locals()
 
-def load_en():
-  random1 = random.randint(1,15)
-  random2 = random.randint(1,15)
-  while random1 == random2:
-    random2 = random.randint(1,15)
-  random3 = random.randint(1,15)
-  while random3 == random1 or random3 == random2:
-    random3 = random.randint(1,15)
-  
-  verso_biblico1 = db(db.bible_verses.numero == random1).select(db.bible_verses.ALL).first()
-  verso_biblico2 = db(db.bible_verses.numero == random2).select(db.bible_verses.ALL).first()
-  verso_biblico3 = db(db.bible_verses.numero == random3).select(db.bible_verses.ALL).first()
-  return locals()
-
 def QuienesSomos():
-  return locals()
-
-def AboutUs():
   return locals()
 
 def DondeEstamos():
   return locals()
 
-def Locations():
-  return locals()
-
 def Creemos():
-  return locals()
-
-def Beliefs():
   return locals()
 
 def CasaAbierta():
   return locals()
 
-def CasaAbierta_en():
-  return locals()
-
 def EstudiosBiblicos():
-  return locals()
-
-def BibleStudies():
   return locals()
 
 @auth.requires_membership('admin')
@@ -288,10 +174,7 @@ def get_rows_versos():
 
 def PazConDios():
   return locals()
-
-def PeaceWithGod():
-  return locals()
-
+  
 @service.json
 def save_cell_versos():
     """ No doubt there are more elegant ways to detect which field has been updated...
