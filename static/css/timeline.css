@@ -6,7 +6,7 @@ body {
   font-size: 100%;
   font-family: "Noto Sans", sans-serif;
   color: #eee9dc;
-  background: #2b3e50; }
+  background: #506C86; }
 
 h1 {
   color: #ccc;
@@ -71,7 +71,7 @@ h1 {
     top: 50%;
     margin-top: -20px; }
   .content:after {
-    border-right-color: #2b3e50;
+    border-right-color: #506C86;
     border-width: 17px;
     top: 50%;
     margin-top: -17px; }

@@ -5,7 +5,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(60,58,137,.9);/*que es igual a #3C3A89*/
+	background: rgba(43,62,80,.9);/*antes: #3C3A89 = 60,58,137,.9*/
 }
 
 /* Overlay closing cross */
