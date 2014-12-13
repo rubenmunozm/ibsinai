@@ -1,0 +1,82 @@
+{{extend 'layout_b.html'}}
+<style type="text/css">
+	.blue{
+		color:#2b3e50
+	}
+	.flecha:hover{
+		text-decoration: none;
+	}
+</style>
+<div class="container-fluid" style="background-color:#d7d7d7;border-radius: 3px;">
+	<h1 class="blue" style="border-bottom: 2px solid rgba(0, 0, 0, 0.2);padding-bottom:10px">
+	<i class="blue fa fa-newspaper-o"></i>&nbsp;Noticias</h1>
+	<br>
+
+	<div class="row-fluid">
+		<div class="col-sm-">
+			
+		</div>
+	</div>
+
+	<div class="row-fluid">
+		<div class="col-sm-1" align="center">
+			{{if request.vars.start:}}
+				{{if int(request.vars.start) > 0:}}
+				<a href="{{=URL('default','noticias',vars={'start':int(request.vars.start)-4})}}" class="flecha">
+					<i style="padding-top:60px" class="blue fa fa-chevron-left fa-3x"></i><br>
+					<h6 style="color:rgba(0, 0, 0, 0.8)">Posteriores</h6>
+				</a>
+				{{else:}}
+					<i style="padding-top:60px" class="blue fa fa-long-arrow-right fa-3x"></i><br>
+					<h6 style="color:rgba(0, 0, 0, 0.8)">Noticia mas reciente</h6>
+				{{pass}}
+			{{else:}}
+				<i style="padding-top:60px" class="blue fa fa-long-arrow-right fa-3x"></i><br>
+				<h6 style="color:rgba(0, 0, 0, 0.8)">Noticia mas reciente</h6>
+			{{pass}}
+		</div>
+
+		<div class="col-sm-10">
+		{{if rows:}}
+	        {{for row in rows:}}
+				<div class="col-sm-3" style="brder-right: 2px solid rgba(0, 0, 0, 0.2); cursor:pointer" 
+				onclick="abrir('{{=URL('default','noticia',vars={'id':row.id})}}')">
+
+					<h4 class="blue"><i class="fa fa-newspaper-o"></i>&nbsp;{{=row.titulo}}</h4>
+					<img style="padding-bottom:10px;border-bottom: 2px solid rgba(0, 0, 0, 0.2);" src="{{=URL('download', args=row.imagen)}}" class="img-rounded img-responsive" rel="noshare">
+					<p class="blue">{{=row.resumen}}</p>
+					<small class="blue"><i>{{=row.fecha}}</i></small>
+
+				</div>
+			{{pass}}
+		{{pass}}
+		</div>
+		
+		<div class="col-sm-1" align="center">
+			{{if not request.vars.start:}}
+			<a href="{{=URL('default','noticias',vars={'start':4})}}" class="flecha">
+			<i style="padding-top:60px" class="blue fa fa-chevron-right fa-3x"></i><br>
+				<h6 style="color:rgba(0, 0, 0, 0.8)">Anteriores</h6>
+			</a>
+			{{else:}}
+				{{if len(rows) == 4:}}
+				<a href="{{=URL('default','noticias',vars={'start':int(request.vars.start)+4})}}" class="flecha">
+				<i style="padding-top:60px" class="blue fa fa-chevron-right fa-3x"></i><br>
+				<h6 style="color:rgba(0, 0, 0, 0.8)">Anteriores</h6>
+				</a>			
+				{{else:}}
+				<h4 style="padding-top:40px" class="blue">No hay mas noticias</h4>
+				{{pass}}
+			{{pass}}
+				
+
+		</div>
+	</div>
+
+</div>
+<br>
+<script>
+function abrir(url) {
+    window.open(url,'_self');
+}
+</script>

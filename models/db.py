@@ -110,3 +110,11 @@ db.define_table('bible_verses',
     Field('verso','string'),
     Field('cita','string',length=25),
     )
+
+db.define_table('noticias',
+    Field('titulo','string', notnull=True),
+    Field('resumen','text', length=500, notnull=True),
+    Field('texto','text'),
+    Field('imagen', 'upload'),
+    Field('fecha','string', length=20, notnull=True),
+    )

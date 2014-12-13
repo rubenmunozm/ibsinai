@@ -16,25 +16,26 @@ from gluon.debug import dbg
 #dbg.set_trace() # stop here!
 
 def index():
-  if request.args(0):
-      now = int(time.time())
-      cakeToken = jwt.encode(
-      {
-      "iss":"07698772005655753885",
-      "aud":"Google",
-      "typ":"google/payments/inapp/item/v1",
-      "iat":now,
-      "exp":now + 3600,
-      "request":{
-        "currencyCode":"USD",
-        "price":request.args(0),
-        "name":"Donativo",
-        "sellerData":"Antioquia Calvary Chapel",
-        "description":"Donación a Iglesia Antioquia Calvary Chapel"
-        }
-      },"Th-H-LlhHhn9jB9_c_aV3A")
-  else:
-    pass
+  noticia = db(db.noticias).select().last()
+  # if request.args(0):
+  #     now = int(time.time())
+  #     cakeToken = jwt.encode(
+  #     {
+  #     "iss":"07698772005655753885",
+  #     "aud":"Google",
+  #     "typ":"google/payments/inapp/item/v1",
+  #     "iat":now,
+  #     "exp":now + 3600,
+  #     "request":{
+  #       "currencyCode":"USD",
+  #       "price":request.args(0),
+  #       "name":"Donativo",
+  #       "sellerData":"Antioquia Calvary Chapel",
+  #       "description":"Donación a Iglesia Antioquia Calvary Chapel"
+  #       }
+  #     },"Th-H-LlhHhn9jB9_c_aV3A")
+  # else:
+  #   pass
   
   form = SQLFORM(db.mensajes)
   if form.process(session=None, formname='contact_form').accepted:
@@ -43,7 +44,25 @@ def index():
       response.flash = 'form has errors'
   return locals()
 
+def noticia():
+  try:
+    noticia = db(db.noticias.id==request.vars.id).select().first()
+  except Exception, e:
+    pass
+  rows = db(db.noticias).select(db.noticias.id,db.noticias.titulo,db.noticias.fecha, orderby=~db.noticias.id, limitby=(0,5))
+  return locals()
 
+def noticias():
+  noticia = db(db.noticias).select().last()
+  if not request.vars.start:
+    ini=0
+  else:
+    ini=int(request.vars.start)
+
+  fin=ini+4
+  rows = db(db.noticias).select(db.noticias.ALL, orderby=~db.noticias.id, limitby=(ini,fin))
+  return locals()
+  
 def tiendita():
   return locals()
 
