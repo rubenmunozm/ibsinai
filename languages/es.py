@@ -169,6 +169,7 @@
 'failed to reload module': 'la recarga del módulo ha fallado',
 'FAQ': 'FAQ',
 'Fecha': 'Fecha',
+'file': 'file',
 'file "%(filename)s" created': 'archivo "%(filename)s" creado',
 'file "%(filename)s" deleted': 'archivo "%(filename)s" eliminado',
 'file "%(filename)s" uploaded': 'archivo "%(filename)s" subido',
